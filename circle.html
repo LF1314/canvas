@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+ body {
+   position: relative;
+   transform: rotate()
+  }
+
+</style>
+<body>
+   <div class="pie">       
+    <canvas id="canvas" width="960" height="960" style="width:320px;height:320px;"></canvas>
+   </div>
+<!-- canvas的画布宽高（分辨率）是width和height，而style中的宽高是canvas在页面中显示的宽高，画布分辨率越高，绘制出来的图任意缩放也不会出现很大的锯齿 -->
+</body>
+<script>
+var canvas = document.getElementById('canvas');   
+    var r2=380,r1=480;
+    var ctx = canvas.getContext('2d');
+if (canvas.getContext){
+
+    var smccircle = {x: 480,
+                  y: 480,
+                  radius: 200}
+    //背景色
+
+   //外彩色扇形背景圆1
+
+
+    //彩色内扇叶
+    // ites(0,45,r2,'#4c17e2');
+    // ites(45,90,r2,'#1777e2');
+    // ites(90,135,r2,'#17cde2');
+    // ites(135,180,r2,'#3fc371');
+    // ites(180,225,r2,'#ffbc3a');
+    // ites(225,270,r2,'#e27217');
+    // ites(270,315,r2,'#e217a1');
+    // ites(315,360,r2,'#b017e2');
+
+    //内覆盖扇形背景圆2
+    // ites(0,360,300,'#273341');
+    //交叉背景线
+
+    
+
+    //头像边框
+    drawCircularText(smccircle,'水分', rads(18), rads(28),'center');
+    drawCircularText(smccircle,'蛋白质', rads(58), rads(78),'center');
+    drawCircularText(smccircle,'内脏脂肪', rads(98), rads(127),'center');
+    drawCircularText(smccircle,'骨骼', rads(153), rads(163),'center');
+    drawCircularText(smccircle,'基础代谢', rads(188), rads(216),'center');
+    drawCircularText(smccircle,'BMI', rads(241), rads(253),'center');
+    drawCircularText(smccircle,'脂肪', rads(287), rads(298),'center');
+    drawCircularText(smccircle,'肌肉', rads(333), rads(343),'center');
+
+
+    
+  }
+    //转换弧度
+    function rads(x){
+        return Math.PI*x/180;
+    } 
+    function drawCircularText(s,string, startAngle, endAngle ,lv){
+        var radius = s.radius,
+            angleDecrement = (startAngle - endAngle)/(string.length-1),
+            angle = parseFloat(startAngle),
+            index = 0,
+            character;
+        
+        ctx.save();
+        
+        ctx.fillStyle = 'yellow';
+        ctx.font = '40px 微软雅黑';
+        ctx.textAlign = lv;
+        ctx.textBaseline = 'middle';
+        
+        while (index < string.length) {
+            character = string.charAt(index);
+            
+            ctx.save();
+            ctx.beginPath();
+            ctx.translate(s.x + Math.cos(angle) * radius,
+                          s.y + Math.sin(angle) * radius);
+            ctx.rotate(Math.PI/2 + angle);
+            
+            ctx.fillText(character, 0, 0);
+//            ctx.strokeText(character, 0, 0);
+            
+            angle -= angleDecrement;
+            index++;
+            ctx.restore();
+        }
+        ctx.restore();
+    }
+   
+/*//H绘制圆形头像
+//  var ctx = document.getElementById('canvas').getContext('2d');
+//  ctx.fillRect(0,0,240,240);
+  ctx.translate(120,120);
+
+  // Create a circular clipping path
+  ctx.beginPath();
+  ctx.arc(0,0,40,0,Math.PI*2,true);
+  ctx.clip();
+
+  // draw background
+  var lingrad = ctx.createLinearGradient(0,-240,0,240);
+  lingrad.addColorStop(0, '#232256');
+  lingrad.addColorStop(1, '#143778');
+  
+  ctx.fillStyle = lingrad;
+  ctx.fillRect(-75,-75,150,150);
+  var img = new Image();
+    img.src='css/img/head.jpg';
+    img.onload = function(){       
+        ctx.drawImage(img,-40,-40,80,80);
+    }*/
+  
+</script>
+</html>

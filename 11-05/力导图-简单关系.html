@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="./dist/echarts.js"></script>
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: './dist'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                 // 使用柱状图就加载bar模块，按需加载
+                 'echarts/chart/force',
+                 'echarts/chart/chord',
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+
+
+
+
+                <!--下面为Option的写法-->
+                var option = {
+    title : {
+        text: '人物关系：乔布斯',
+        subtext: '数据来自人立方',
+        x:'right',
+        y:'bottom'
+    },
+    tooltip : {
+        trigger: 'item',//数据触发类型
+        formatter: '{a} : {b}'//a为系列名，b为节点名
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            restore : {show: true},
+            magicType: {show: true, type: ['force', 'chord']},
+            saveAsImage : {show: true}
+        }
+    },
+    legend: {
+        x: 'left',
+        data:['家人','朋友']
+    },
+    series : [
+        {
+            type:'force',
+            name : "人物关系",
+            ribbonType: false,//对于此力导图转换出的和弦图，边使用贝塞尔曲线，可以是单向边，但是不可以表示边的权重，并且它和下面的Minradius和Maxradius息息相关
+            categories : [//节点分类
+                {
+                    name: '人物'
+                },
+                {
+                    name: '家人'//必须和上面data中的数据相对应
+                },
+                {
+                    name:'朋友'//必须和上面data中的数据相对应
+                }
+            ],
+            itemStyle: {
+                
+                normal: {//当设置为emphsis（悬浮）时，整个节点的桥线看起来像直线
+                    label: {
+                        show: true,//显示节点的名称
+                        textStyle: {
+                            color: '#8B4531'//最好使用颜色比节点颜色深的，否则文字显示的不清楚
+                        }
+                    },
+                    nodeStyle : {
+                        brushType : 'fill',//刷类型,可以用both
+                        borderColor : 'rgba(50,100,200,0.3)',//设置节点的描边颜色，raba是css中的颜色设定，学习连接http://www.w3cways.com/1725.html
+                        borderWidth : 1//节点的描边大小，默认1，值越大，描边范围越大
+                    },
+                    linkStyle: {//线条样式
+                        type: 'curve'
+                    }
+                },
+                emphasis: {//此数据类型可以不要，因为已经有了normal
+                    label: {
+                        show: true//即使设置成true也不会显示，因为和normal展示的图形冲突，但是如果和normal调换位置，图形也显示
+                        // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                    },
+                    nodeStyle : {
+                        //r: 30
+                    },
+                    linkStyle : {}
+                },
+                
+                
+                
+            },
+            useWorker: true,//设定为false时，图形刚刚出来时，有慢慢的反应，设定为true时，图形刚刚出来时，无反应延迟，显得死板
+            minRadius : 15,//除了中心数据，其他圆的最小半径的变化
+            maxRadius : 25,//最大半径，包括中心数据
+            gravity: 1.1,//值越大图形越靠拢
+            scaling: 1.1,//值越大，图形越散
+            roam: 'move',//可以控制鼠标拖动图片，改变位置
+            nodes:[//节点
+                {category:0,name: '乔布斯', value :5, label: '乔布斯\n（主要）'},//对于加入lable标签的节点，节点显示lable标签的名字，但是此节点的name不可去掉，以备后用
+                {category:1, name: '丽萨-乔布斯',value : 2},//category-类别，0--为数据中心，有几种数字，就有几种节点
+                {category:1, name: '保罗-乔布斯',value : 3},//value值越大，节点的半径越大
+                {category:1, name: '克拉拉-乔布斯',value : 3},
+                {category:1, name: '劳伦-鲍威尔',value : 7},
+                {category:2, name: '史蒂夫-沃兹尼艾克',value : 5},
+                {category:2, name: '奥巴马',value : 8},
+                {category:2, name: '比尔-盖茨',value : 9},
+                {category:2, name: '乔纳森-艾夫',value : 4},
+                {category:2, name: '蒂姆-库克',value : 4},
+                {category:2, name: '龙-韦恩',value : 1},
+            ],
+            links : [//source为原点，target为目标点，name为关系，weight为从起点到目标点的距离，值越大，距离越短
+                {source : '丽萨-乔布斯', target : '乔布斯', weight : 5, name: '女儿'},
+                {source : '保罗-乔布斯', target : '乔布斯', weight : 2, name: '父亲'},
+                {source : '克拉拉-乔布斯', target : '乔布斯', weight : 1, name: '母亲'},
+                {source : '劳伦-鲍威尔', target : '乔布斯', weight : 2},
+                {source : '史蒂夫-沃兹尼艾克', target : '乔布斯', weight : 3, name: '合伙人'},
+                {source : '奥巴马', target : '乔布斯', weight : 1},
+                {source : '比尔-盖茨', target : '乔布斯', weight : 6, name: '竞争对手'},
+                {source : '乔纳森-艾夫', target : '乔布斯', weight : 1, name: '爱将'},
+                {source : '蒂姆-库克', target : '乔布斯', weight : 1},
+                {source : '龙-韦恩', target : '乔布斯', weight : 1},
+                {source : '克拉拉-乔布斯', target : '保罗-乔布斯', weight : 1},
+                {source : '奥巴马', target : '保罗-乔布斯', weight : 1},
+                {source : '奥巴马', target : '克拉拉-乔布斯', weight : 1},
+                {source : '奥巴马', target : '劳伦-鲍威尔', weight : 1},
+                {source : '奥巴马', target : '史蒂夫-沃兹尼艾克', weight : 1},
+                {source : '比尔-盖茨', target : '奥巴马', weight : 6},
+                {source : '比尔-盖茨', target : '克拉拉-乔布斯', weight : 1},
+                {source : '蒂姆-库克', target : '奥巴马', weight : 1,name:'0.0000077777'}
+            ]
+        }
+    ]
+};
+var ecConfig = require('echarts/config');
+function focus(param) {
+    var data = param.data;
+    var links = option.series[0].links;
+    var nodes = option.series[0].nodes;
+    if (
+        data.source !== undefined
+        && data.target !== undefined
+    ) { //点击的是边
+        var sourceNode = nodes.filter(function (n) {return n.name == data.source})[0];
+        var targetNode = nodes.filter(function (n) {return n.name == data.target})[0];
+        console.log("选中了边 " + sourceNode.name + ' -> ' + targetNode.name + ' (' + data.weight + ')');
+    } else { // 点击的是点
+        console.log("选中了" + data.name + '(' + data.value + ')');
+    }
+}
+myChart.on(ecConfig.EVENT.CLICK, focus)
+
+myChart.on(ecConfig.EVENT.FORCE_LAYOUT_END, function () {
+    console.log(myChart.chart.force.getPosition());
+});
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                <!--上面为Option的写法-->
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+    </script>
+</body>

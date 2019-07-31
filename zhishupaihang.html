@@ -1,0 +1,987 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>营商环境指数发布系统</title>
+    
+
+    <script type="text/javascript">var basePath="http://yingshang.youedata.com/me";</script>
+    <link rel="stylesheet" href="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/css/index.css">
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/jquery.js"></script>
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/echarts.js"></script>
+    <style>
+        .mark3-l-bottom{position:relative; overflow: hidden; }
+        .mark3-l-bottom .mark3-l-ul{position:absolute;}
+    </style>
+</head>
+<body>
+<div class="mark-content">
+    <div class="mark-title">
+        <div class="mark-logo"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/logo.png"></div>
+        <div class="mark-nav">
+            <ul>
+                <li><a href="http://yingshang.youedata.com/me/dataBase">数据基础</a></li>
+                <li><a href="http://yingshang.youedata.com/me/indexCalculation">指标计算</a></li>
+                <li><a href="http://yingshang.youedata.com/me/indexRanking"    class="on">指数排名</a></li>
+                <li><a href="http://yingshang.youedata.com/me/indexAnalyze">指数分析</a></li>
+                <li ys-active="social">
+                    <a href="http://yingshang.youedata.com/me/social">社会环境</a>
+                </li>
+                <li ys-active="gov">
+                    <a href="http://yingshang.youedata.com/me/gov">政府服务</a>
+                </li>
+                <li ys-active="admin">
+                    <a href="http://yingshang.youedata.com/me/admin">行政效能</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mark3-main">
+        <div class="mark3-l">
+            <!--<h3>
+                <select id="yearSelect">
+                    <option value="2017.1">2017上半年全国城市排名</option>
+                    <option value="2016">2016年全国城市排名</option>
+                </select>
+            </h3>-->
+            <div  class="w_select w_select2">
+                <h3 class="w_selected">
+                    <span>2017年全国城市排名(1-10)</span>
+                    <i class="w_triangle"></i></h3>
+                <div class="w_option">
+                    <h3>2017年全国城市排名(1-10)</h3>
+                    <h3>2017年全国城市排名(11-20)</h3>
+                    <h3>2017年全国城市排名(21-30)</h3>
+                    <h3>2017年全国城市排名(31-36)</h3>
+                </div>
+            </div>
+
+            <div class="mark3-title"><span>排名</span><span>城市</span><span>总指数</span></div>
+            <div class="mark3-l-bottom">
+                <div class='mark3-l-ul'>
+                    <ul class='clearfix'>
+                        <li data-g="87,83,60"><span>1</span><span class="cityName">成都</span><span>81</span></li>
+                        <li data-g="91,38,58"><span>2</span><span class="cityName">沈阳</span><span>74</span></li>
+                        <li data-g="84,33,66"><span>3</span><span class="cityName">南京</span><span>70</span></li>
+                        <li data-g="77,42,81"><span>4</span><span class="cityName">北京</span><span>71</span></li>
+                        <li data-g="81,41,61"><span>5</span><span class="cityName">杭州</span><span>69</span></li>
+                        <li data-g="78,49,58"><span>6</span><span class="cityName">西安</span><span>68</span></li>
+                        <!--<li data-g="84,67,56"><span>4</span><span class="cityName">南宁</span><span>75</span></li>-->
+                        <li data-g="67,62,71"><span>7</span><span class="cityName">深圳</span><span>67</span></li>
+                        <li data-g="80,45,40"><span>8</span><span class="cityName">南昌</span><span>65</span></li>
+                        <li data-g="79,44,42"><span>9</span><span class="cityName">昆明</span><span>65</span></li>
+                        <li data-g="71,40,43"><span>10</span><span class="cityName">贵阳</span><span>59</span></li>
+                        <li data-g="65,43,40"><span>11</span><span class="cityName">海口</span><span>56</span></li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="mark3-c">
+            <div class="mark3-map" id="d_map"></div>
+            <div class="mark3-city clearfix">
+                <ul>
+                    <li><i>成都</i><br><span>第一名</span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/ydgs.png"></li>
+                    <li><i>上海</i><br><span>第二名</span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/ydgs.png"></li>
+                    <li><i>厦门</i><br><span>第三名</span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/ydgs.png"></li>
+                    <li><i>合肥</i><br><span>第四名</span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/ydgs.png"></li>
+                    <li><i>宁波</i><br><span>第五名</span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/ydgs.png"></li>
+                    <li><i>沈阳</i><br><span>第六名</span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/ydgs.png"></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="mark3-r">
+            <div class="mark3-r-t">
+                <div class="mark3-r-1">
+                    <h1>1</h1>
+                    <div class="mark3-r-11">
+                        <span>成都</span>
+                        <div id="wd" style="width: 350px; height: 270px;"></div>
+                    </div>
+
+                </div>
+                <div class="mark3-r-2">
+                    <div class="mark3-r-2-1">
+                        <h6>行政审批：TOP5</h6>
+                        <ul>
+                            <li><span>沈阳</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar1-type.png" style="width: 227.5px;"><span class="mark3-r-num">91</span></li>
+                            <li><span>成都</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar1-type.png" style="width: 217.5px;"><span class="mark3-r-num">87</span></li>
+                            <li><span>南京</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar1-type.png" style="width: 217.5px;"><span class="mark3-r-num">83</span></li>
+                            <li><span>杭州</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar1-type.png" style="width: 202.5px;"><span class="mark3-r-num">81</span></li>
+                            <li><span>南昌</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar1-type.png" style="width: 200px;"><span class="mark3-r-num">80</span></li>
+                            <!--<li><span>昆明</span><img  src="img/bar-bar1-type.png" style="width: 197.5px;"><span class="mark3-r-num">79</span></li>-->
+                            <!--<li><span>南昌</span><img  src="img/bar-bar1-type.png" style="width: 200px;"><span class="mark3-r-num">80</span></li>-->
+                        </ul>
+                    </div>
+                    <div class="mark3-r-2-1">
+                        <h6>政府服务：TOP5</h6>
+                        <ul>
+                            <li><span>成都</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar2-type.png" style="width: 207.5px;"><span class="mark3-r-num">83</span></li>
+                            <li><span>深圳</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar2-type.png" style="width: 155px;"><span class="mark3-r-num">62</span></li>
+                            <li><span>西安</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar2-type.png" style="width: 122.5px;"><span class="mark3-r-num">49</span></li>
+                            <li><span>南昌</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar2-type.png" style="width: 112.5px;"><span class="mark3-r-num">45</span></li>
+                            <li><span>昆明</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar2-type.png" style="width: 110px;"><span class="mark3-r-num">44</span></li>
+                            <!--<li><span>贵阳</span><img  src="img/bar-bar2-type.png" style="width: 162.5px;"><span class="mark3-r-num">65</span></li>-->
+                        </ul>
+                    </div>
+                    <div class="mark3-r-2-1">
+                        <h6>社会环境：TOP5</h6>
+                        <ul>
+                            <li><span>北京</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar3-type.png" style="width: 202.5px;"><span class="mark3-r-num">81</span></li>
+                            <li><span>深圳</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar3-type.png" style="width: 177.5px;"><span class="mark3-r-num">71</span></li>
+                            <li><span>南京</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar3-type.png" style="width: 177.5px;"><span class="mark3-r-num">66</span></li>
+                            <li><span>杭州</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar3-type.png" style="width: 152.5px;"><span class="mark3-r-num">61</span></li>
+                            <li><span>成都</span><img  src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar3-type.png" style="width: 150px;"><span class="mark3-r-num">60</span></li>
+                            <!--<li><span>西安</span><img  src="img/bar-bar3-type.png" style="width: 145px;"><span class="mark3-r-num">58</span></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    //地图
+    $(function () {
+
+        /* add by dengshaojun start */
+        // 基本静态数据（2017年一级指标指数和总指数）
+        var zbData_20171 = [
+            {name: "成都"},
+            {name: "上海"},
+            {name: "厦门"},
+            {name: "合肥"},
+            {name: "宁波"},
+            {name: "沈阳"},
+            {name: "长春"},
+            {name: "天津"},
+            {name: "北京"},
+            {name: "南京"}
+        ];
+        var zbData_20172 = [
+            {name: "长沙"},
+            {name: "福州"},
+            {name: "深圳"},
+            {name: "大连"},
+            {name: "兰州"},
+            {name: "广州"},
+            {name: "杭州"},
+            {name: "昆明"},
+            {name: "济南"},
+            {name: "西安"}
+        ];
+        var zbData_20173 = [
+            {name: "重庆"},
+            {name: "郑州"},
+            {name: "青岛"},
+            {name: "南昌"},
+            {name: "银川"},
+            {name: "南宁"},
+            {name: "石家庄"},
+            {name: "贵阳"},
+            {name: "哈尔滨"},
+            {name: "武汉"}
+        ];
+        var zbData_20174 = [
+            {name: "乌鲁木齐"},
+            {name: "西宁"},
+            {name: "太原"},
+            {name: "保定"},
+            {name: "海口"},
+            {name: "呼和浩特"}
+        ];
+        var city_20171 = [
+            {name: "成都",symbol:'rect',value: 76,symbolSize:[20,76]},
+            {name: "上海",symbol:'rect',value: 75,symbolSize:[20,75]},
+            {name: "厦门",symbol:'rect',value: 74,symbolSize:[20,74]},
+            {name: "合肥",symbol:'rect',value: 74,symbolSize:[20,74]},
+            {name: "宁波",symbol:'rect',value: 72,symbolSize:[20,72]},
+            {name: "沈阳",symbol:'rect',value: 71,symbolSize:[20,71]},
+            {name: "长春",symbol:'rect',value: 71,symbolSize:[20,71]},
+            {name: "天津",symbol:'rect',value: 71,symbolSize:[20,71]},
+            {name: "北京",symbol:'rect',value: 71,symbolSize:[20,71]},
+            {name: "南京",symbol:'rect',value: 70,symbolSize:[20,70]}
+        ];
+        var city_20172 = [
+            {name: "长沙",symbol:'rect',value: 70,symbolSize:[20,70]},
+            {name: "福州",symbol:'rect',value: 69,symbolSize:[20,69]},
+            {name: "深圳",symbol:'rect',value: 69,symbolSize:[20,69]},
+            {name: "大连",symbol:'rect',value: 69,symbolSize:[20,69]},
+            {name: "兰州",symbol:'rect',value: 69,symbolSize:[20,69]},
+            {name: "广州",symbol:'rect',value: 68,symbolSize:[20,68]},
+            {name: "杭州",symbol:'rect',value: 67,symbolSize:[20,67]},
+            {name: "昆明",symbol:'rect',value: 67,symbolSize:[20,67]},
+            {name: "济南",symbol:'rect',value: 67,symbolSize:[20,67]},
+            {name: "西安",symbol:'rect',value: 66,symbolSize:[20,66]}
+        ];
+        var city_20173 = [
+            {name: "重庆",symbol:'rect',value: 66,symbolSize:[20,66]},
+            {name: "郑州",symbol:'rect',value: 66,symbolSize:[20,66]},
+            {name: "青岛",symbol:'rect',value: 66,symbolSize:[20,66]},
+            {name: "南昌",symbol:'rect',value: 65,symbolSize:[20,65]},
+            {name: "银川",symbol:'rect',value: 65,symbolSize:[20,65]},
+            {name: "南宁",symbol:'rect',value: 63,symbolSize:[20,63]},
+            {name: "石家庄",symbol:'rect',value: 63,symbolSize:[20,63]},
+            {name: "贵阳",symbol:'rect',value: 62,symbolSize:[20,62]},
+            {name: "哈尔滨",symbol:'rect',value: 62,symbolSize:[20,62]},
+            {name: "武汉",symbol:'rect',value: 61,symbolSize:[20,61]}
+        ];
+        var city_20174 = [
+            {name: "乌鲁木齐",symbol:'rect',value: 61,symbolSize:[20,61]},
+            {name: "西宁",symbol:'rect',value: 60,symbolSize:[20,60]},
+            {name: "太原",symbol:'rect',value: 59,symbolSize:[20,59]},
+            {name: "保定",symbol:'rect',value: 59,symbolSize:[20,59]},
+            {name: "海口",symbol:'rect',value: 57,symbolSize:[20,57]},
+            {name: "呼和浩特",symbol:'rect',value: 56,symbolSize:[20,56]}
+        ];
+        var zspm_2017 = [
+            {name: "北京", xzsp: 78.7580737, zffw: 39.6203783, shhj: 76.8964768, zzs: 70.5582152},
+            {name: "贵阳", xzsp: 75.4787507, zffw: 39.6833005, shhj: 45.0500866, zzs: 62.2339279},
+            {name: "深圳", xzsp: 70.9207485, zffw: 50.5914724, shhj: 83.3905538, zzs: 69.3488544},
+            {name: "南昌", xzsp: 78.7985025, zffw: 41.4634156, shhj: 49.21912, zzs: 65.4156086},
+            {name: "昆明", xzsp: 82.4996129, zffw: 40.8726928, shhj: 46.576438, zzs: 66.9895939},
+            {name: "海口", xzsp: 68.5715292, zffw: 38.9619437, shhj: 66.9895939, zzs: 57.1122076},
+            {name: "沈阳", xzsp: 87.144824, zffw: 34.0157056, shhj: 61.4459037, zzs: 71.3792162},
+            {name: "成都", xzsp: 84.5413434, zffw: 61.9498183, shhj: 62.6831871, zzs: 75.6514071},
+            {name: "杭州", xzsp: 78.9812691, zffw: 38.6034216, shhj: 61.0899107, zzs: 67.327428},
+            {name: "西安", xzsp: 77.4159405, zffw: 39.9085396, shhj: 59.7651426, zzs: 66.3843007},
+            {name: "石家庄", xzsp: 76.7378925, zffw: 31.802601, shhj: 50.6418732, zzs: 62.5316304},
+            {name: "南宁", xzsp: 77.0792599, zffw: 40.3535911, shhj: 43.1670321, zzs: 62.9516806},
+            {name: "长沙", xzsp: 77.568078, zffw: 57.9019091, shhj: 57.6554733, zzs: 69.6523233},
+            {name: "太原", xzsp: 70.3733379, zffw: 38.2147679, shhj: 47.032538, zzs: 59.2734639},
+            {name: "青岛", xzsp: 77.0396886, zffw: 38.4475769, shhj: 59.8573912, zzs: 65.8848068},
+            {name: "广州", xzsp: 74.5620689, zffw: 42.6796052, shhj: 72.9008421, zzs: 67.8533308},
+            {name: "天津", xzsp: 77.5889271, zffw: 56.4467406, shhj: 63.7835296, zzs: 70.5994103},
+            {name: "呼和浩特", xzsp: 66.0270406, zffw: 70.5994103, shhj: 43.4545757, zzs: 56.0535324},
+            {name: "武汉", xzsp: 69.6533286, zffw: 33.6097746, shhj: 64.3289996, zzs: 61.379752},
+            {name: "南京", xzsp: 83.5665517, zffw: 32.6989278, shhj: 66.2505489, zzs: 69.9298264},
+            {name: "哈尔滨", xzsp: 76.008322, zffw: 36.7300609, shhj: 45.0833968, zzs: 61.9676847},
+            {name: "合肥", xzsp: 80.8389243, zffw: 72.6014343, shhj: 53.3878871, zzs: 73.7012189},
+            {name: "郑州", xzsp: 73.8575433, zffw: 47.1541663, shhj: 61.310803, zzs: 66.0075198},
+            {name: "济南", xzsp: 82.3745374, zffw: 36.6915461, shhj: 49.921037, zzs: 66.7472391},
+            {name: "乌鲁木齐", xzsp: 72.8774303, zffw: 38.9803106, shhj: 46.7403145, zzs: 60.8705832},
+            {name: "银川", xzsp: 76.835834, zffw: 50.5899685, shhj: 44.5410196, zzs: 65.127698},
+            {name: "西宁", xzsp: 74.1063057, zffw: 37.6019058, shhj: 40.1072043, zzs: 60.0056055},
+            {name: "兰州", xzsp: 85.4723489, zffw: 45.2143779, shhj: 41.3169395, zzs: 68.5896728},
+            {name: "宁波", xzsp: 84.5199934, zffw: 52.3194553, shhj: 51.6305179, zzs: 71.5019907},
+            {name: "厦门", xzsp: 93.18378, zffw: 40.0841011, shhj: 50.1997139, zzs: 73.967031},
+            {name: "上海", xzsp: 78.0047256, zffw: 46.2854352, shhj: 95.0264462, zzs: 75.0652117},
+            {name: "重庆", xzsp: 68.8210344, zffw: 60.711474, shhj: 64.5586721, zzs: 66.3466498},
+            {name: "大连", xzsp: 80.9391517, zffw: 52.4430286, shhj: 48.5463286, zzs: 68.7613625},
+            {name: "福州", xzsp: 84.7219203, zffw: 46.7398642, shhj: 45.8896919, zzs: 69.3590634},
+            {name: "长春", xzsp: 84.763781, zffw: 49.7856376, shhj: 51.4904524, zzs: 71.1134866},
+            {name: "保定", xzsp: 71.6674281, zffw: 30.1525067, shhj: 47.3653647, zzs: 58.5040312}
+        ];
+
+        // 数据加工
+        // 总指数排名
+        var qgcspm = function (baseData, page) {
+            var zzsOrder = baseData.sort(
+                function(a, b) {
+                    if(a.zzs > b.zzs) return -1;
+                    if(a.zzs < b.zzs) return 1;
+                    return 0;
+                }
+            );
+            $('.mark3-l-bottom ul').empty();
+            var start = (page-1)*10;
+            var end = page*10;
+            $.each(zzsOrder,
+                function(index, value) {
+                    if (index >= start && index < end) {
+                        index += 1;
+                        $('.mark3-l-bottom ul').append("<li data-g='"+Math.round(value.xzsp)+","+Math.round(value.zffw)+","+Math.round(value.shhj)+"'><span>"+index+"</span><span class='cityName'>"+value.name+"</span><span>"+Math.round(value.zzs)+"</span></li>");
+                    }
+                }
+            );
+        }
+        // 行政审批top5
+        var xzsptop5 = function (baseData) {
+            var xzspOrder = baseData.sort(
+                function(a, b) {
+                    if(a.xzsp > b.xzsp) return -1;
+                    if(a.xzsp < b.xzsp) return 1;
+                    return 0;
+                }
+            );
+            $('.mark3-r-2 .mark3-r-2-1:nth-child(1) ul').empty();
+            $.each(xzspOrder,
+                function(index, value) {
+                    if (index > 4) return;
+                    $('.mark3-r-2 .mark3-r-2-1:nth-child(1) ul').append("<li><span>"+value.name+"</span><img  src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar1-type.png' style='width: "+Math.round(value.xzsp)*2.5+"px;'><span class='mark3-r-num'>"+Math.round(value.xzsp)+"</span></li>");
+                }
+            );
+        }
+        // 政府服务top5
+        var zffwtop5 = function (baseData) {
+            var zffwOrder = baseData.sort(
+                function(a, b) {
+                    if(a.zffw > b.zffw) return -1;
+                    if(a.zffw < b.zffw) return 1;
+                    return 0;
+                }
+            );
+            $('.mark3-r-2 .mark3-r-2-1:nth-child(2) ul').empty();
+            $.each(zffwOrder,
+                function(index, value) {
+                    if (index > 4) return;
+                    $('.mark3-r-2 .mark3-r-2-1:nth-child(2) ul').append("<li><span>"+value.name+"</span><img  src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar2-type.png' style='width: "+Math.round(value.zffw)*2.5+"px;'><span class='mark3-r-num'>"+Math.round(value.zffw)+"</span></li>");
+                }
+            );
+        }
+        // 社会环境top5
+        var shhjtop5 = function (baseData) {
+            var shhjOrder = baseData.sort(
+                function(a, b) {
+                    if(a.shhj > b.shhj) return -1;
+                    if(a.shhj < b.shhj) return 1;
+                    return 0;
+                }
+            );
+            $('.mark3-r-2 .mark3-r-2-1:nth-child(3) ul').empty();
+            $.each(shhjOrder,
+                function(index, value) {
+                    if (index > 4) return;
+                    $('.mark3-r-2 .mark3-r-2-1:nth-child(3) ul').append("<li><span>"+value.name+"</span><img  src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bar-bar3-type.png' style='width: "+Math.round(value.shhj)*2.5+"px;'><span class='mark3-r-num'>"+Math.round(value.shhj)+"</span></li>");
+                }
+            );
+        }
+
+        qgcspm(zspm_2017, 1);
+        xzsptop5(zspm_2017);
+        zffwtop5(zspm_2017);
+        shhjtop5(zspm_2017);
+        /* add by dengshaojun end */
+
+
+        /*
+        * 保留url上的参数并传递
+        * */
+        var selected = GetQueryString("city");
+		var selectedYear = GetQueryString("year");
+        if(selected){
+            $(".mark-nav ul li").each(function(idx){
+
+                var url = $(this).find("a").attr('href')
+                url = url.split('?')[0];
+                //var urlYear = selectedYear? '&year='+selectedYear : '';
+                $(this).find("a").attr("href", url +'?city='+selected);
+                //$(this).find("a").attr("href", url +'?city='+selected + urlYear);
+            })
+        }
+		
+        function GetQueryString(name)
+        {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if( r!==null )return  decodeURI(r[2]); return null;
+        }
+        /*
+         * end
+         *
+         */
+        setTimeout(function(){
+            window.location.href = $(".mark-nav ul li a").eq(3).attr("href");
+        },59000);
+
+        var geoCoordMap = {
+            "雄安":[116.05438000000004,38.98065],
+            "海门":[121.15,31.89],
+            "鄂尔多斯":[109.781327,39.608266],
+            "招远":[120.38,37.35],
+            "舟山":[122.207216,29.985295],
+            "齐齐哈尔":[123.97,47.33],
+            "盐城":[120.13,33.38],
+            "赤峰":[118.87,42.28],
+            "青岛":[120.33,36.07],
+            "乳山":[121.52,36.89],
+            "金昌":[102.188043,38.520089],
+            "泉州":[118.58,24.93],
+            "莱西":[120.53,36.86],
+            "日照":[119.46,35.42],
+            "胶南":[119.97,35.88],
+            "南通":[121.05,32.08],
+            "拉萨":[91.11,29.97],
+            "云浮":[112.02,22.93],
+            "梅州":[116.1,24.55],
+            "文登":[122.05,37.2],
+            "上海":[121.48,31.22],
+            "攀枝花":[101.718637,26.582347],
+            "威海":[122.1,37.5],
+            "承德":[117.93,40.97],
+            "厦门":[118.1,24.46],
+            "汕尾":[115.375279,22.786211],
+            "潮州":[116.63,23.68],
+            "丹东":[124.37,40.13],
+            "太仓":[121.1,31.45],
+            "曲靖":[103.79,25.51],
+            "烟台":[121.39,37.52],
+            "福州":[119.3,26.08],
+            "瓦房店":[121.979603,39.627114],
+            "即墨":[120.45,36.38],
+            "抚顺":[123.97,41.97],
+            "玉溪":[102.52,24.35],
+            "张家口":[114.87,40.82],
+            "阳泉":[113.57,37.85],
+            "莱州":[119.942327,37.177017],
+            "湖州":[120.1,30.86],
+            "汕头":[116.69,23.39],
+            "昆山":[120.95,31.39],
+            "宁波":[121.56,29.86],
+            "湛江":[110.359377,21.270708],
+            "揭阳":[116.35,23.55],
+            "荣成":[122.41,37.16],
+            "连云港":[119.16,34.59],
+            "葫芦岛":[120.836932,40.711052],
+            "常熟":[120.74,31.64],
+            "东莞":[113.75,23.04],
+            "河源":[114.68,23.73],
+            "淮安":[119.15,33.5],
+            "泰州":[119.9,32.49],
+            "南宁":[108.33,22.84],
+            "营口":[122.18,40.65],
+            "惠州":[114.4,23.09],
+            "江阴":[120.26,31.91],
+            "蓬莱":[120.75,37.8],
+            "韶关":[113.62,24.84],
+            "嘉峪关":[98.289152,39.77313],
+            "广州":[113.23,23.16],
+            "延安":[109.47,36.6],
+            "太原":[112.53,37.87],
+            "清远":[113.01,23.7],
+            "中山":[113.38,22.52],
+            "昆明":[102.73,25.04],
+            "寿光":[118.73,36.86],
+            "盘锦":[122.070714,41.119997],
+            "长治":[113.08,36.18],
+            "深圳":[114.07,22.62],
+            "珠海":[113.52,22.3],
+            "宿迁":[118.3,33.96],
+            "咸阳":[108.72,34.36],
+            "铜川":[109.11,35.09],
+            "平度":[119.97,36.77],
+            "佛山":[113.11,23.05],
+            "海口":[110.35,20.02],
+            "江门":[113.06,22.61],
+            "章丘":[117.53,36.72],
+            "肇庆":[112.44,23.05],
+            "大连":[121.62,38.92],
+            "临汾":[111.5,36.08],
+            "吴江":[120.63,31.16],
+            "石嘴山":[106.39,39.04],
+            "沈阳":[123.38,41.8],
+            "苏州":[120.62,31.32],
+            "茂名":[110.88,21.68],
+            "嘉兴":[120.76,30.77],
+            "长春":[125.35,43.88],
+            "胶州":[120.03336,36.264622],
+            "银川":[106.27,38.47],
+            "张家港":[120.555821,31.875428],
+            "三门峡":[111.19,34.76],
+            "锦州":[121.15,41.13],
+            "南昌":[115.89,28.68],
+            "柳州":[109.4,24.33],
+            "三亚":[109.511909,18.252847],
+            "自贡":[104.778442,29.33903],
+            "吉林":[126.57,43.87],
+            "阳江":[111.95,21.85],
+            "泸州":[105.39,28.91],
+            "西宁":[101.74,36.56],
+            "宜宾":[104.56,29.77],
+            "呼和浩特":[111.65,40.82],
+            "成都":[104.06,30.67],
+            "大同":[113.3,40.12],
+            "镇江":[119.44,32.2],
+            "桂林":[110.28,25.29],
+            "张家界":[110.479191,29.117096],
+            "宜兴":[119.82,31.36],
+            "北海":[109.12,21.49],
+            "西安":[108.95,34.27],
+            "金坛":[119.56,31.74],
+            "东营":[118.49,37.46],
+            "牡丹江":[129.58,44.6],
+            "遵义":[106.9,27.7],
+            "绍兴":[120.58,30.01],
+            "扬州":[119.42,32.39],
+            "常州":[119.95,31.79],
+            "潍坊":[119.1,36.62],
+            "重庆":[106.54,29.59],
+            "台州":[121.420757,28.656386],
+            "南京":[118.78,32.04],
+            "滨州":[118.03,37.36],
+            "贵阳":[106.71,26.57],
+            "无锡":[120.29,31.59],
+            "本溪":[123.73,41.3],
+            "克拉玛依":[84.77,45.59],
+            "渭南":[109.5,34.52],
+            "马鞍山":[118.48,31.56],
+            "宝鸡":[107.15,34.38],
+            "焦作":[113.21,35.24],
+            "句容":[119.16,31.95],
+            "北京":[116.46,39.92],
+            "徐州":[117.2,34.26],
+            "衡水":[115.72,37.72],
+            "包头":[110,40.58],
+            "绵阳":[104.73,31.48],
+            "乌鲁木齐":[87.68,43.77],
+            "枣庄":[117.57,34.86],
+            "杭州":[120.19,30.26],
+            "淄博":[118.05,36.78],
+            "鞍山":[122.85,41.12],
+            "溧阳":[119.48,31.43],
+            "库尔勒":[86.06,41.68],
+            "安阳":[114.35,36.1],
+            "开封":[114.35,34.79],
+            "济南":[117,36.65],
+            "德阳":[104.37,31.13],
+            "温州":[120.65,28.01],
+            "九江":[115.97,29.71],
+            "邯郸":[114.47,36.6],
+            "临安":[119.72,30.23],
+            "兰州":[103.73,36.03],
+            "沧州":[116.83,38.33],
+            "临沂":[118.35,35.05],
+            "南充":[106.110698,30.837793],
+            "天津":[117.2,39.13],
+            "富阳":[119.95,30.07],
+            "泰安":[117.13,36.18],
+            "诸暨":[120.23,29.71],
+            "郑州":[113.65,34.76],
+            "哈尔滨":[126.63,45.75],
+            "聊城":[115.97,36.45],
+            "芜湖":[118.38,31.33],
+            "唐山":[118.02,39.63],
+            "平顶山":[113.29,33.75],
+            "邢台":[114.48,37.05],
+            "德州":[116.29,37.45],
+            "济宁":[116.59,35.38],
+            "荆州":[112.239741,30.335165],
+            "宜昌":[111.3,30.7],
+            "义乌":[120.06,29.32],
+            "丽水":[119.92,28.45],
+            "洛阳":[112.44,34.7],
+            "秦皇岛":[119.57,39.95],
+            "株洲":[113.16,27.83],
+            "石家庄":[114.48,38.03],
+            "莱芜":[117.67,36.19],
+            "常德":[111.69,29.05],
+            "保定":[115.48,38.85],
+            "湘潭":[112.91,27.87],
+            "金华":[119.64,29.12],
+            "岳阳":[113.09,29.37],
+            "长沙":[113,28.21],
+            "衢州":[118.88,28.97],
+            "廊坊":[116.7,39.53],
+            "菏泽":[115.480656,35.23375],
+            "合肥":[117.27,31.86],
+            "武汉":[114.31,30.52],
+            "大庆":[125.03,46.58]
+        };
+
+        var convertData = function (data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                var geoCoord = geoCoordMap[data[i].name];
+                if (geoCoord) {
+                    res.push({
+                        name: data[i].name,
+                        symbol:data[i].symbol,
+                        value: geoCoord.concat(data[i].value),
+                        symbolSize: data[i].symbolSize,
+                        symbolOffset:[0,-(data[i].value/2)]
+                    });
+                }
+            }
+            return res;
+        };
+        var zbData = function (data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                var geoCoord = geoCoordMap[data[i].name];
+                if (geoCoord) {
+                    res.push({
+                        name: data[i].name,
+                        coord:geoCoord
+                    });
+                }
+            }
+            return res;
+        };
+
+        var _chinaJson;
+
+        $.get(basePath+'/jsp/yingshangzhishu1/js/china.json', function (chinaJson) {
+            _chinaJson = chinaJson;
+
+            echarts.registerMap('china', _chinaJson);
+            initMap(0, city_20171, zbData_20171, chinaJson);
+
+        });
+
+        var timer = null;
+
+        function initMap(g, _city, _zbData, chinaJson){
+
+            var mapOption = {
+
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (params) {
+                        return params.name + ' : ' + params.value[2];
+                    }
+                },
+
+                visualMap: {
+                    right:'50',
+                    bottom:'0%',
+                    min: 50,
+                    max: 100,
+                    itemWidth:40,
+                    itemHeight:80,
+                    text:['100','50'],
+                    realtime: false,
+                    calculable: false,
+                    color: ['#13ff34','#93ff00','#fff800','#ff4a00','#ff0000'],
+                    textStyle: {
+                        fontSize:12,
+                        color: '#fff'
+                    }
+                },
+                geo: {
+                    top:50,
+                    map: 'china',
+                    label: {
+                        emphasis: {
+                            show: false
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaColor: '#215798',
+                            borderColor: '#a3abb4'
+                        },
+                        emphasis: {
+                            areaColor: '#3c81c6'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        type: 'scatter',
+                        coordinateSystem: 'geo',
+                        data: convertData(_city),
+                        label:{
+                            normal:{
+                                show:true,
+                                formatter:function(d){return d.value[2]},
+                                position:'top',
+                                textStyle:{
+                                    color:'#00f9de',
+                                    fontSize:14
+                                }
+                            }
+                        },
+                        markPoint: {
+                            symbol: 'circle',
+                            symbolSize:1,
+                            label:{
+                                normal:{
+                                    show:true,
+                                    formatter:function(d){return d.name},
+                                    position:[-14,9],
+                                    textStyle:{
+                                        color:'#fff',
+                                        fontSize:14
+                                    }
+                                }
+                            },
+                            data: zbData(_zbData)
+                        }
+                    }
+                ]
+            }
+
+
+            var dMapChart = echarts.init(document.getElementById('d_map'));
+            dMapChart.setOption(mapOption,true);
+            //var g = -1;
+            var cityNum = _city.length;
+            clearInterval(timer);
+            autoPlay();
+            timer = setInterval(function () {
+                autoPlay()
+            },3000);
+
+            function autoPlay(){
+                $(".mark3-l-bottom .mark3-l-ul").animate({'background-position-x':'0','background-position-y':g*70}, "slow");
+                if( g === 0){
+                    $('.mark3-l-bottom .mark3-l-ul').animate({"top": 0},400);
+                }else if(g > Math.floor(cityNum/2)){
+                    if($('.mark3-l-bottom').height() < $('.mark3-l-bottom .mark3-l-ul').height()){
+                        $('.mark3-l-bottom .mark3-l-ul').animate({"top": $('.mark3-l-bottom').height() - $('.mark3-l-bottom .mark3-l-ul').height(),'background-position-x':'0','background-position-y':g*70},400);
+                    }
+
+                }
+//                if(g>cityNum-1){
+//                    var gs=g-cityNum-1;
+//                    $(".mark3-l-bottom .mark3-l-ul").animate({'background-position-x':'0','background-position-y':10*70}, "slow");
+//                    $(".mark3-l-bottom ul").css({transform:"translateY(-"+gs*70+"px)",transition:"all 1s"})
+//
+//                }else {
+//                    $(".mark3-l-bottom .mark3-l-ul").animate({'background-position-x':'0','background-position-y':g*70}, "slow");
+//                }
+                var city = $.extend(true, [], _city);
+                var cityData = $('.mark3-l-bottom ul li').eq(g).attr("data-g");
+                var cityName = $('.mark3-l-bottom ul li').eq(g).find(".cityName").text();
+                var cityIndex = $('.mark3-l-bottom ul li').eq(g).find("span:first").html();
+                //$(".mark3-r-1").find("h1").text(g+1);
+                $(".mark3-r-1").find("h1").text(cityIndex);
+                $(".mark3-r-1").find("span").text(cityName);
+//                console.log(g);
+//                $(".mark3-l-bottom ul").animate({'background-position-x':'0','background-position-y':g*70}, "slow");
+
+
+
+
+                city[g].symbolSize = [30,104];
+                mapOption.series[0].data = convertData(city);
+                echarts.registerMap('china', chinaJson);
+                var dMapChart = echarts.init(document.getElementById('d_map'));
+                dMapChart.setOption(mapOption,true);
+
+                wdOption.series[0].data[0].value = cityData.split(",");
+                var wdChart = echarts.init(document.getElementById('wd'));
+                wdChart.setOption(wdOption,true);
+
+                if(g === cityNum-1){
+                    g = 0;
+                }else{
+                    g++;
+                }
+
+
+            }
+        }
+
+        wdOption = {
+
+            radar: [
+                {
+                    indicator: [
+                        {text: '行政审批 ', max: 100},
+                        {text: '政府服务 ', max: 100},
+                        {text: '社会环境 ', max: 100}
+                    ],
+                    center: ['50%','62%'],
+                    radius: 110,
+                    name: {
+                        formatter:'{value}',
+                        textStyle: {
+                            color:'#1da2df',
+                            fontSize:14
+                        }
+                    },
+                    splitArea: {
+                        areaStyle: {
+                            color: ['rgba(0, 225, 206, 0.1)']
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#00f9de'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: ['#2edbe6','#eacc0e','#3ebc5c','#e7ce10']
+                        }
+                    }
+                }
+            ],
+            series: [
+                {
+                    type: 'radar',
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                    label: {
+                        normal: {
+                            show: true,
+                            formatter: function(params) {
+                                //console.log(params);
+                            },
+                            textStyle:{
+                                color:"#00e7d4"
+                            }
+                        }
+                    },
+                    data: [
+                        {
+                            value: [87,83,60],
+                            lineStyle: {
+                                normal: {
+                                    color:'#00e7d4'
+                                }
+                            },
+                            areaStyle: {
+                                normal: {
+                                    opacity: 1,
+                                    color: 'rgba(98, 175, 240, 0.5)'
+                                }
+                            }
+                        }
+                    ]
+
+                }
+            ]
+        };
+        var wdChart = echarts.init(document.getElementById('wd'));
+        wdChart.setOption(wdOption,true);
+
+//        $.get('js/china.json', function (chinaJson) {
+//
+//        })
+
+
+        //select
+        $('.w_select').click(function(e){
+            $(this).toggleClass('active');
+            if(e.target.nodeName ==='H3'){
+                if( $('.w_selected span').text() !== $(e.target).text()){
+                    $('.w_selected span').text($(e.target).text());
+                    //切换年份 初始化数据
+
+                }
+
+            }
+            e.stopPropagation();
+
+        });
+        $(document).on('click',function(){
+            $('.w_select').removeClass('active');
+        })
+
+        /* add by dengshaojun start */
+
+        // 基本静态数据（2016年一级指标指数和总指数 & 2017年上半年一级指标指数和总指数）-- 已注释
+        /*var zspm_2016 = [
+            {name: "北京", xzsp: 71, zffw: 46, shhj: 94, zzs: 71},
+            {name: "贵阳", xzsp: 63, zffw: 52, shhj: 44, zzs: 56.9},
+            {name: "成都", xzsp: 59, zffw: 57, shhj: 48, zzs: 56.5},
+            {name: "沈阳", xzsp: 78, zffw: 39, shhj: 41, zzs: 63},
+            {name: "深圳", xzsp: 67, zffw: 47, shhj: 71, zzs: 63.6},
+            {name: "杭州", xzsp: 77, zffw: 54, shhj: 50, zzs: 67},
+            {name: "南昌", xzsp: 72, zffw: 32, shhj: 43, zzs: 59},
+            {name: "昆明", xzsp: 63, zffw: 54, shhj: 40, zzs: 56},
+            {name: "西安", xzsp: 73, zffw: 56, shhj: 41, zzs: 63.5},
+            {name: "海口", xzsp: 73, zffw: 70, shhj: 39, zzs: 66},
+            {name: "雄安", xzsp: 75, zffw: 54, shhj: 68, zzs: 69},
+            {name: "南宁", xzsp: 84, zffw: 67, shhj: 56, zzs: 75}
+        ];
+        var zspm_20171 = [
+            {name: "北京", xzsp: 77, zffw: 42, shhj: 80, zzs: 71},
+            {name: "贵阳", xzsp: 71, zffw: 40, shhj: 43, zzs: 59},
+            {name: "深圳", xzsp: 67, zffw: 62, shhj: 71, zzs: 67},
+            {name: "南昌", xzsp: 80, zffw: 45, shhj: 40, zzs: 64.8},
+            {name: "昆明", xzsp: 79, zffw: 44, shhj: 42, zzs: 64.6},
+            {name: "海口", xzsp: 65, zffw: 43, shhj: 40, zzs: 56},
+            {name: "沈阳", xzsp: 91, zffw: 38, shhj: 58, zzs: 74},
+            {name: "成都", xzsp: 87, zffw: 83, shhj: 60, zzs: 81},
+            {name: "杭州", xzsp: 81, zffw: 41, shhj: 61, zzs: 69},
+            {name: "西安", xzsp: 78, zffw: 49, shhj: 58, zzs: 68},
+            {name: "南京", xzsp: 84, zffw: 33, shhj: 66, zzs: 70}
+        ];
+        var city_2016 = [
+            {name: "南宁",symbol:'rect',value: 75,symbolSize:[20,75]},
+            {name: "北京",symbol:'rect',value: 71,symbolSize:[20,71]},
+            {name: "雄安",symbol:'rect',value: 69,symbolSize:[20,69]},
+            {name: "杭州",symbol:'rect',value: 67,symbolSize:[20,67]},
+            {name: "海口",symbol:'rect',value: 66,symbolSize:[20,66]},
+            {name: "深圳",symbol:'rect',value: 64,symbolSize:[20,64]},
+            {name: "西安",symbol:'rect',value: 64,symbolSize:[20,64]},
+            {name: "沈阳",symbol:'rect',value: 63,symbolSize:[20,63]},
+            {name: "南昌",symbol:'rect',value: 59,symbolSize:[20,59]},
+            {name: "贵阳",symbol:'rect',value: 57,symbolSize:[20,57]},
+            {name: "成都",symbol:'rect',value: 57,symbolSize:[20,57]},
+            {name: "昆明",symbol:'rect',value: 56,symbolSize:[20,56]}
+        ];
+        var city_20171 = [
+            {name: "成都",symbol:'rect',value: 81,symbolSize:[20,81]},
+            {name: "沈阳",symbol:'rect',value: 74,symbolSize:[20,74]},
+            {name: "南京",symbol:'rect',value: 70,symbolSize:[20,70]},
+            {name: "北京",symbol:'rect',value: 71,symbolSize:[20,71]},
+            {name: "杭州",symbol:'rect',value: 69,symbolSize:[20,69]},
+            {name: "西安",symbol:'rect',value: 68,symbolSize:[20,68]},
+            {name: "深圳",symbol:'rect',value: 67,symbolSize:[20,67]},
+            {name: "南昌",symbol:'rect',value: 65,symbolSize:[20,65]},
+            {name: "昆明",symbol:'rect',value: 65,symbolSize:[20,65]},
+            {name: "贵阳",symbol:'rect',value: 59,symbolSize:[20,59]},
+            {name: "海口",symbol:'rect',value: 56,symbolSize:[20,56]}
+
+        ];
+        var zbData_2016 = [
+            {name: "南宁"},
+            {name: "北京"},
+            {name: "雄安"},
+            {name: "杭州"},
+            {name: "海口"},
+            {name: "深圳"},
+            {name: "西安"},
+            {name: "沈阳"},
+            {name: "南昌"},
+            {name: "贵阳"},
+            {name: "成都"},
+            {name: "昆明"}
+        ];
+        var zbData_20171 = [
+            {name: "成都"},
+            {name: "沈阳"},
+            {name: "北京"},
+            {name: "杭州"},
+            {name: "西安"},
+            {name: "深圳"},
+            {name: "南昌"},
+            {name: "昆明"},
+            {name: "贵阳"},
+            {name: "海口"},
+            {name: "南京"}
+        ];*/
+
+
+        // 年份选择
+        var yearSelected = $(".w_selected span");
+        yearSelected.bind('DOMNodeInserted', function(e) {
+            var year = $(e.target).html();
+            if (year == "2017年全国城市排名(1-10)") {
+                qgcspm(zspm_2017, 1);
+                initMap(0, city_20171, zbData_20171, _chinaJson);
+                /*xzsptop5(zspm_20171);
+                zffwtop5(zspm_20171);
+                shhjtop5(zspm_20171);*/
+            } else if (year == "2017年全国城市排名(11-20)"){
+                qgcspm(zspm_2017, 2);
+                initMap(0, city_20172, zbData_20172, _chinaJson);
+            } else if (year == "2017年全国城市排名(21-30)"){
+                qgcspm(zspm_2017, 3);
+                initMap(0, city_20173, zbData_20173, _chinaJson);
+            } else if (year == "2017年全国城市排名(31-36)"){
+                qgcspm(zspm_2017, 4);
+                initMap(0, city_20174, zbData_20174, _chinaJson);
+            }
+        });
+
+        /* add by dengshaojun end*/
+
+
+    });
+</script>
+</body>
+</html>

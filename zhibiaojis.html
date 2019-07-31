@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>营商环境指数发布系统</title>
+
+
+    <script type="text/javascript">var basePath = "http://yingshang.youedata.com/me";</script>
+    <link rel="stylesheet" href="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/css/index.css">
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/jquery.js"></script>
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/echarts.js"></script>
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/macarons.js"></script>
+</head>
+
+<body>
+    <div class="mark-content">
+        <div class="mark-title">
+            <div class="mark-logo"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/logo.png"></div>
+            <div class="mark-nav">
+                <ul>
+                    <li><a href="http://yingshang.youedata.com/me/dataBase">数据基础</a></li>
+                    <li><a href="http://yingshang.youedata.com/me/indexCalculation" class="on">指标计算</a></li>
+                    <li><a href="http://yingshang.youedata.com/me/indexRanking">指数排名</a></li>
+                    <li><a href="http://yingshang.youedata.com/me/indexAnalyze">指数分析</a></li>
+                    <li ys-active="social">
+                        <a href="http://yingshang.youedata.com/me/social">社会环境</a>
+                    </li>
+                    <li ys-active="gov">
+                        <a href="http://yingshang.youedata.com/me/gov">政府服务</a>
+                    </li>
+                    <li ys-active="admin">
+                        <a href="http://yingshang.youedata.com/me/admin">行政效能</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mark2-l">
+            <div class="mark2-l-main">
+                <h2>指标体系</h2>
+                <div class="relation-schema" id="gx"></div>
+                <div class="relation-news">
+                    <h3>指标体系的文字介绍</h3>
+                    <span>共包括3个一级指标，分别是度量政府部门办事效率的行政审批指标，度量政府服务企业能力的政府服务指标，度量营商环境外部推动力的社会环境指标。</span>
+                    <div class="news-list">
+                        <p style="padding:15px 5px 0px 3px;">
+                            <em>“行政审批”</em>指标下设12个二级指标，是根据《国务院印发2016年推进“放管服”改革工作要点》等文件中提到的与营商环境改革密切相关的12个业务流程作为二级指标。</p>
+                    </div>
+                    <div class="news-list">
+                        <p><em>“政府服务”</em>指标共含4个二级指标，包括市场准入机制、政府采购、政府招投标以及信息公开等方面。</p>
+                    </div>
+                    <div class="news-list">
+                        <p><em>“社会环境”</em>指标共含5个二级指标，包括人才供给、投融资、企业运营成本、法治环境、企业信用等方面。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mark2-l-bottom">
+                <div class="cav">
+                    <div class="cav2"><canvas id="cav2" width="70" height="70"></canvas></div>
+                    <div class="cav3"><canvas id="cav3" width="56" height="59"></canvas></div>
+                    <div class="cav4"><canvas id="cav4" width="60" height="60"></canvas></div>
+                    <div class="cav5"><canvas id="cav5" width="60" height="60"></canvas></div>
+                    <div class="cav6"><canvas id="cav6" width="55" height="55"></canvas></div>
+                    <div class="cav7"><canvas id="cav7" width="75" height="78"></canvas></div>
+                    <div class="cav8"><canvas id="cav8" width="65" height="100"></canvas></div>
+                    <div class="cav9"><canvas id="cav9" width="1200" height="265"></canvas></div>
+                    <div class="cav10"><canvas id="cav10" width="315" height="135"></canvas></div>
+                </div>
+                <div class="footerlist">
+                    <span>计算流程</span>
+                    <!--列表左边-->
+                    <span>声音数据</span>
+                    <span>8GB</span>
+                    <span>文本数据</span>
+                    <span>50GB</span>
+                    <span>JSON</span>
+                    <span>10GB</span>
+                    <span>XML</span>
+                    <span>30GB</span>
+                    <span>图片数据</span>
+                    <span>9GB</span>
+                    <!--1-->
+                    <span>底层数据</span>
+                    <span><em>1055640700</em>条数据</span>
+                    <span>187G</span>
+                    <!--2-->
+                    <span>47个三级指标</span>
+                    <span>已完成凝练<em>60</em>%</span>
+                    <span>112G</span>
+                    <span>60%</span>
+                    <!--3-->
+                    <span>21个二级指标</span>
+                    <span>正在压缩成21个二级指标</span>
+                    <!--4-->
+                    <span>一级指标</span>
+                    <span>3个主因子</span>
+
+                    <span>结构数据</span>
+                    <span>80GB</span>
+                </div>
+            </div>
+        </div>
+        <div class="mark2-r">
+            <div class="mark2-list">
+                <h4>全部指标实时计算用时</h4>
+                <div class="mark-da" id="gauge1"></div>
+            </div>
+            <div class="mark2-list">
+                <h4>指数处理效率及信息压缩率</h4>
+                <div class="mark-da" id="line2"></div>
+            </div>
+            <div class="mark2-list">
+                <h4>指数优良性八项检测</h4>
+                <div class="mark-da" id="line3"></div>
+            </div>
+            <div class="mark2-list">
+                <h4>经过五大评价标准测试</h4>
+                <div class="mark-da mark-arrowbg">
+                    <span>有效性检验</span>
+                    <span>无偏性检验</span>
+                    <span>平均性检验</span>
+                    <span>一致性检验</span>
+                    <span>综合性检验</span>
+                    <div class="arrow-img"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/canvas2.js"></script>
+    <script>
+
+
+        $(function () {
+            /*
+            * 保留url上的参数并传递
+            * */
+            var selected = GetQueryString("city");
+            var selectedYear = GetQueryString("year");
+            if (selected) {
+                $(".mark-nav ul li").each(function (idx) {
+
+                    var url = $(this).find("a").attr('href')
+                    url = url.split('?')[0];
+                    //var urlYear = selectedYear? '&year='+selectedYear : ''; 
+                    $(this).find("a").attr("href", url + '?city=' + selected);
+                    //$(this).find("a").attr("href", url +'?city='+selected + urlYear);
+                })
+
+            }
+            function GetQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r !== null) return decodeURI(r[2]); return null;
+            }
+            /*
+             * end
+             * */
+
+
+            setTimeout(function () {
+                window.location.href = $(".mark-nav ul li a").eq(2).attr("href");
+            }, 59000);
+        });
+        var zhuida = function (data) {
+            var x = 0;
+            for (var i = 0; i < data.length; i++) {
+                if (x < data[i]) {
+                    x = data[i];
+                }
+            }
+            return x;
+        };
+        var zhuixiao = function (data) {
+            var x = data[0];
+            for (var i = 0; i < data.length; i++) {
+                if (x > data[i]) {
+                    x = data[i];
+                }
+            }
+            return x;
+        };
+        var pingjun = function (data) {
+            var x = 0;
+            for (var i = 0; i < data.length; i++) {
+                x += data[i];
+            };
+            var reData = x / data.length;
+            return reData.toFixed(2);
+        };
+        gauge1Option = {
+            series: [{
+                name: "完成率",
+                type: "gauge",
+                startAngle: 180,
+                endAngle: 0,
+                radius: 135,
+                center: ['50%', '90%'],
+                axisLine: {
+                    lineStyle: {
+                        width: 95,
+                        color: [[0.2, '#52b3ba'], [0.8, '#66c9a3'], [1, '#d35842']]
+                    }
+                },
+                axisLabel: {
+                    formatter: function (e) {
+                        switch (e + "") {
+                            case "10":
+                                return "低";
+                            case "50":
+                                return "中";
+                            case "90":
+                                return "高";
+                            default:
+                                return ""
+                        }
+                    },
+                    textStyle: {
+                        color: "#fff",
+                        fontSize: 12
+                    }
+                },
+                pointer: {
+                    width: "12%"
+                },
+                itemStyle: {
+                    normal: {
+                        color: "rgba(255,255,255,0.5)"
+                    }
+                },
+                title: {
+                    show: !0,
+                    offsetCenter: [0, "-50%"],
+                    textStyle: {
+                        fontSize: 16,
+                        color: "#ffffff"
+                    }
+                },
+                detail: {
+                    show: !0,
+                    backgroundColor: "rgba(0,0,0,0)",
+                    borderWidth: 0,
+                    borderColor: "#ccc",
+                    offsetCenter: [0, -10],
+                    formatter: "{value}%",
+                    textStyle: {
+                        color: '#00ffcc',
+                        fontSize: 18
+                    }
+                },
+                data: [{
+                    value: 94.09,
+                    name: "完成率"
+                }],
+                markPoint: {
+                    data: [{
+                        type: 'max',
+                        name: '时间',
+                        x: 90,
+                        y: 43,
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: function (obj) {
+                                    return "5S";
+                                },
+                                textStyle: {
+                                    color: '#ffffff',
+                                    fontSize: 24
+                                }
+                            }
+                        }
+                    }
+                    ],
+                    itemStyle: {
+                        normal: {
+                            color: 'transparent'
+                        }
+                    }
+                }
+            }]
+        };
+        var gauge1Chart = echarts.init(document.getElementById('gauge1'), 'macarons');
+        gauge1Chart.setOption(gauge1Option, true);
+
+        //
+        var paiW = function () {
+            var w = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+            var day = new Date().getDay();
+            var newW = w.slice(day);
+            for (var i = 0; i < day; i++) {
+                newW.push(w[i]);
+            }
+            return newW;
+        };
+        var line2Data1 = [0.7, 0.86, 0.91, 0.76, 0.85, 0.60, 0.87];
+        var line2Data2 = [0.99, 0.75, 0.60, 0.78, 0.52, 0.89, 0.76];
+        line2option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        color: '#57617B'
+                    }
+                }
+            },
+            grid: {
+                top: 5,
+                left: 10,
+                right: 30,
+                bottom: 0,
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                boundaryGap: false,
+                axisLine: {
+                    lineStyle: {
+                        color: '#2b73a2'
+                    }
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: "#666666"
+                    }
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#122e43'
+                    }
+                },
+                data: paiW()
+            }],
+            yAxis: [{
+                type: 'value',
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: "#666666"
+                    }
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#2b73a2'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: '#122e43'
+                    }
+                }
+            }],
+            series: [{
+                name: '处理效率',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    normal: {
+                        width: 2
+                    }
+                },
+                areaStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(137, 189, 27, 0.9)'
+                        }, {
+                            offset: 0.8,
+                            color: 'rgba(137, 189, 27, 0.1)'
+                        }], false),
+                        shadowColor: 'rgba(0, 0, 0, 0.1)',
+                        shadowBlur: 10
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#7dfe2b'
+                    }
+                },
+                data: line2Data1,
+                markPoint: {
+                    data: [{
+                        type: 'max',
+                        name: '最大值',
+                        x: 95,
+                        y: 43,
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: function (obj) {
+                                    return "最大值:" + zhuida(line2Data1);
+                                },
+                                textStyle: {
+                                    color: '#00ffcc',
+                                    fontSize: 14
+                                }
+                            }
+                        }
+                    },
+                    {
+                        type: 'max',
+                        name: '平均值',
+                        x: 290,
+                        y: 43,
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: function (obj) {
+                                    return "平均值:" + pingjun(line2Data1);
+                                },
+                                //formatter: "平均值:88",
+                                textStyle: {
+                                    color: '#00ffcc',
+                                    fontSize: 14
+                                }
+                            }
+                        }
+                    }
+                    ],
+                    itemStyle: {
+                        normal: {
+                            color: 'transparent'
+                        }
+                    }
+                }
+            },
+            {
+                name: '信息压缩率',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    normal: {
+                        width: 2
+                    }
+                },
+                areaStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(3, 82, 146, 0.9)'
+                        }, {
+                            offset: 0.8,
+                            color: 'rgba(3, 82, 146, 0.1)'
+                        }], false),
+                        shadowColor: 'rgba(0, 0, 0, 0.1)',
+                        shadowBlur: 10
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#2dace8'
+                    }
+                },
+                data: line2Data2
+            }
+            ]
+        };
+        var line3Data = [0.99, 0.80, 0.90, 0.88, 0.82, 0.89, 0.96, 0.85];
+        line3option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        color: '#57617B'
+                    }
+                }
+            },
+            grid: {
+                top: 5,
+                left: -10,
+                right: 50,
+                bottom: 25,
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                boundaryGap: false,
+                axisLine: {
+                    lineStyle: {
+                        color: '#2b73a2'
+                    }
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#122e43'
+                    }
+                },
+                data: ['进退', '因子互换', '恒等性', '比例性', '公度性', '确定性', '时间互换', '连锁'],
+                //设置字体倾斜
+                axisLabel: {
+                    interval: 0,
+                    rotate: -45,//倾斜度 -90 至 90 默认为0
+                    textStyle: {
+                        color: "#666666"
+                    }
+                }
+            }],
+            yAxis: [{
+                min: 0.5,
+                type: '',
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    show: false
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#2b73a2'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: '#122e43'
+                    }
+                }
+            }],
+            series: [
+                {
+                    name: '检验结果',
+                    type: 'line',
+                    lineStyle: {
+                        normal: {
+                            type: 'dashed',
+                            color: '#d00acd',
+                            width: 2
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(95, 47, 142, 0.9)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(95, 47, 142, 0.1)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    data: line3Data,
+                    markPoint: {
+                        data: [{
+                            type: 'max',
+                            name: '最大值',
+                            x: 70,
+                            y: 43,
+                            label: {
+                                normal: {
+                                    show: true,
+                                    formatter: function (obj) {
+                                        return "最大值:" + zhuida(line3Data);
+                                    },
+                                    textStyle: {
+                                        color: '#00ffcc',
+                                        fontSize: 14
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            type: 'max',
+                            name: '平均值',
+                            x: 265,
+                            y: 43,
+                            label: {
+                                normal: {
+                                    show: true,
+                                    formatter: function (obj) {
+                                        return "平均值:" + pingjun(line3Data);
+                                    },
+                                    //formatter: "平均值:88",
+                                    textStyle: {
+                                        color: '#00ffcc',
+                                        fontSize: 14
+                                    }
+                                }
+                            }
+                        }
+                            ,
+                        {
+                            type: 'max',
+                            name: '评分',
+                            x: 342,
+                            y: 100,
+                            label: {
+                                normal: {
+                                    show: true,
+                                    formatter: function (obj) {
+                                        return "优秀";
+                                    },
+                                    //formatter: "平均值:88",
+                                    textStyle: {
+                                        color: '#36ba4d',
+                                        fontSize: 18
+                                    }
+                                }
+                            }
+                        }
+                        ],
+                        itemStyle: {
+                            normal: {
+                                color: 'transparent'
+                            }
+                        }
+                    },
+                    markLine: {
+                        lineStyle: {
+                            normal: {
+                                type: 'solid',
+                                color: '#1da2df',
+                                fontSize: 14
+                            }
+                        },
+                        data: [
+                            {
+                                yAxis: 0.85,
+                                symbol: 'none',
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        formatter: '85%'
+                                    }
+                                }
+                            }
+                        ]
+                    }
+
+                }
+            ]
+        };
+        var line2Chart = echarts.init(document.getElementById('line2'));
+        line2Chart.setOption(line2option);
+        var line3Chart = echarts.init(document.getElementById('line3'));
+        line3Chart.setOption(line3option);
+        gxOption = {
+            animationDuration: 3000,
+            animationEasingUpdate: 'quinticInOut',
+
+            series: [{
+                name: '营商环境指数',
+                type: 'graph',
+                layout: 'force',
+                itemStyle: {
+                    normal: {
+                        color: '#00f9de',
+                        fontSzie: 18
+                    }
+                },
+                force: {
+                    repulsion: 110
+                },
+                data: [
+                    {
+                    "name": "营商环境指数",
+                    // "x": 0,
+                    // y: 0,
+                    "symbolSize": 50,
+                    "draggable": "true",
+                    "value": 27,
+                    symbol: 'image://http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/gx01.png',
+                    itemStyle: {
+                        normal: {
+                            color: '#00f0f3',
+                            borderType: 'dotted'
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                color: '#00f0f3',
+                                fontSize: 18
+                            }
+                        }
+                    }
+
+                }, {
+                    "name": "行政审批",
+                    "value": 15,
+                    "symbolSize": 50,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    symbol: 'image://http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/gx04.png',
+                    itemStyle: {
+                        normal: {
+                            color: '#234ce3'
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 18
+                            }
+                        }
+                    }
+                }, {
+                    "name": "政府服务",
+                    "value": 15,
+                    "symbolSize": 50,
+                    "category": "政府服务",
+                    "draggable": "true",
+                    symbol: 'image://http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/gx03.png',
+                    itemStyle: {
+                        normal: {
+                            color: '#159a3c'
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 18
+                            }
+                        }
+                    }
+                }, {
+                    "name": "社会环境",
+                    "value": 15,
+                    "symbolSize": 50,
+                    "category": "社会环境",
+                    "draggable": "true",
+                    symbol: 'image://http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/gx02.png',
+                    itemStyle: {
+                        normal: {
+                            color: '#9c5a14'
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 18
+                            }
+                        }
+                    }
+                }, {
+                    "name": "施工许可证时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "用电报装时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "办理纳税时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "不动产登记时间",
+                    "value": 60,
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "获得信贷时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "水气报装时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "商标注册时间",
+                    "value": 5,
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "工业产品生产许可证时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "财税优惠办理时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "货物通关时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "企业开办时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "专利审批时间",
+                    "symbolSize": 35,
+                    "category": "行政审批",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "市场准入机制",
+                    "value": 5,
+                    "symbolSize": 35,
+                    "category": "政府服务",
+                    "draggable": "true",
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "政府采购",
+                    "symbolSize": 35,
+                    "category": "政府服务",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "政府招投标",
+                    "symbolSize": 35,
+                    "category": "政府服务",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "信息公开",
+                    "symbolSize": 35,
+                    "category": "政府服务",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "人才供给",
+                    "symbolSize": 35,
+                    "category": "社会环境",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "投融资",
+                    "value": 5,
+                    "symbolSize": 35,
+                    "category": "社会环境",
+                    "draggable": "true",
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "企业运营成本",
+                    "symbolSize": 35,
+                    "category": "社会环境",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "法治环境",
+                    "symbolSize": 35,
+                    "category": "社会环境",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "企业信用",
+                    "symbolSize": 35,
+                    "category": "社会环境",
+                    "draggable": "true",
+                    "value": 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 14,
+                                color: '#1da2df'
+                            },
+                            position: 'top'
+                        }
+                    }
+                }, {
+                    "name": "企业名称预核准平均时间",
+                    "symbolSize": 20,
+                    "category": "企业开办时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "工商登记平均时间",
+                    "symbolSize": 20,
+                    "category": "企业开办时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "刻制公章平均时间",
+                    "symbolSize": 20,
+                    "category": "企业开办时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "银行开户平均时间",
+                    "value": 5,
+                    "symbolSize": 20,
+                    "category": "企业开办时间",
+                    "draggable": "true"
+                }, {
+                    "name": "国（地）税登记平均时间",
+                    "symbolSize": 20,
+                    "category": "企业开办时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "社保登记平均时间",
+                    "symbolSize": 20,
+                    "category": "企业开办时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "统计登记平均时间",
+                    "symbolSize": 20,
+                    "category": "企业开办时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "施工许可证平均时间",
+                    "symbolSize": 20,
+                    "category": "施工许可证时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "供电方案答复平均时间",
+                    "symbolSize": 20,
+                    "category": "用电报装时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "设计审查平均时间",
+                    "symbolSize": 20,
+                    "category": "用电报装时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "中间检查平均时间",
+                    "value": 5,
+                    "symbolSize": 20,
+                    "category": "用电报装时间",
+                    "draggable": "true"
+                }, {
+                    "name": "竣工验收平均时间",
+                    "symbolSize": 20,
+                    "category": "用电报装时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "装表接电平均时间",
+                    "symbolSize": 20,
+                    "category": "用电报装时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "纳税申报平均时间",
+                    "symbolSize": 20,
+                    "category": "办理纳税时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "受理平均时间",
+                    "symbolSize": 20,
+                    "category": "不动产登记时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "审核平均时间",
+                    "symbolSize": 20,
+                    "category": "不动产登记时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "登薄平均时间",
+                    "symbolSize": 20,
+                    "category": "不动产登记时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "发证平均时间",
+                    "value": 5,
+                    "symbolSize": 20,
+                    "category": "不动产登记时间",
+                    "draggable": "true"
+                }, {
+                    "name": "获得信贷平均时间",
+                    "symbolSize": 20,
+                    "category": "获得信贷时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "申请受理平均时间",
+                    "symbolSize": 20,
+                    "category": "水气报装时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "方案设计审核平均时间",
+                    "symbolSize": 20,
+                    "category": "水气报装时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "工程施工平均时间",
+                    "symbolSize": 20,
+                    "category": "水气报装时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "通水气验收平均时间",
+                    "symbolSize": 20,
+                    "category": "水气报装时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "商标注册平均时间",
+                    "symbolSize": 20,
+                    "category": "商标注册时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "初审平均时间",
+                    "value": 5,
+                    "symbolSize": 20,
+                    "category": "专利审批时间",
+                    "draggable": "true"
+                }, {
+                    "name": "优先审查平均时间",
+                    "symbolSize": 20,
+                    "category": "专利审批时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "专利发证平均时间",
+                    "symbolSize": 20,
+                    "category": "专利审批时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "工业产品生产许可证平均时间",
+                    "symbolSize": 20,
+                    "category": "工业产品生产许可证时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "货物通关平均时间",
+                    "symbolSize": 20,
+                    "category": "货物通关时间",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "负面清单规定数量",
+                    "symbolSize": 20,
+                    "category": "市场准入机制",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "政府采购的总额",
+                    "symbolSize": 20,
+                    "category": "政府采购",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "标的数量",
+                    "value": 5,
+                    "symbolSize": 20,
+                    "category": "政府招投标",
+                    "draggable": "true"
+                }, {
+                    "name": "中标金额",
+                    "symbolSize": 20,
+                    "category": "政府招投标",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "政府信息公开总数",
+                    "symbolSize": 20,
+                    "category": "信息公开",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "互联网公示条数",
+                    "symbolSize": 20,
+                    "category": "信息公开",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "高素质劳动者比例",
+                    "symbolSize": 20,
+                    "category": "人才供给",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "投资机构的数量",
+                    "symbolSize": 20,
+                    "category": "投融资",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "新增投融资的额度",
+                    "symbolSize": 20,
+                    "category": "投融资",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "商业用水价格",
+                    "value": 5,
+                    "symbolSize": 20,
+                    "category": "企业运营成本",
+                    "draggable": "true"
+                }, {
+                    "name": "商业用电价",
+                    "symbolSize": 20,
+                    "category": "企业运营成本",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "物流价格",
+                    "symbolSize": 20,
+                    "category": "企业运营成本",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "写字楼房租",
+                    "symbolSize": 20,
+                    "category": "企业运营成本",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "税务负担",
+                    "value": 5,
+                    "symbolSize": 20,
+                    "category": "企业运营成本",
+                    "draggable": "true"
+                }, {
+                    "name": "与企业相关法律裁判文书数量",
+                    "symbolSize": 20,
+                    "category": "法治环境",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "失信企业数",
+                    "symbolSize": 20,
+                    "category": "企业信用",
+                    "draggable": "true",
+                    "value": 1
+                }, {
+                    "name": "老赖名单的数量",
+                    "symbolSize": 20,
+                    "category": "企业信用",
+                    "draggable": "true",
+                    "value": 1
+                }
+                ],
+                links: [
+                    {
+                        "target": "企业名称预核准平均时间",
+                        "source": "企业开办时间"
+                    }, {
+                        "target": "工商登记平均时间",
+                        "source": "企业开办时间"
+                    }, {
+                        "target": "刻制公章平均时间",
+                        "source": "企业开办时间"
+                    }, {
+                        "target": "银行开户平均时间",
+                        "source": "企业开办时间"
+                    }, {
+                        "target": "国（地）税登记平均时间",
+                        "source": "企业开办时间"
+                    }, {
+                        "target": "社保登记平均时间",
+                        "source": "企业开办时间"
+                    }, {
+                        "target": "统计登记平均时间",
+                        "source": "企业开办时间"
+                    }, {
+                        "target": "施工许可证平均时间",
+                        "source": "施工许可证时间"
+                    }, {
+                        "target": "供电方案答复平均时间",
+                        "source": "用电报装时间"
+                    }, {
+                        "target": "设计审查平均时间",
+                        "source": "用电报装时间"
+                    }, {
+                        "target": "中间检查平均时间",
+                        "source": "用电报装时间"
+                    }, {
+                        "target": "竣工验收平均时间",
+                        "source": "用电报装时间"
+                    }, {
+                        "target": "装表接电平均时间",
+                        "source": "用电报装时间"
+                    }, {
+                        "target": "纳税申报平均时间",
+                        "source": "办理纳税时间"
+                    }, {
+                        "target": "受理平均时间",
+                        "source": "不动产登记时间"
+                    }, {
+                        "target": "审核平均时间",
+                        "source": "不动产登记时间"
+                    }, {
+                        "target": "登薄平均时间",
+                        "source": "不动产登记时间"
+                    }, {
+                        "target": "发证平均时间",
+                        "source": "不动产登记时间"
+                    }, {
+                        "target": "获得信贷平均时间",
+                        "source": "获得信贷时间"
+                    }, {
+                        "target": "申请受理平均时间",
+                        "source": "水气报装时间"
+                    }, {
+                        "target": "方案设计审核平均时间",
+                        "source": "水气报装时间"
+                    }, {
+                        "target": "工程施工平均时间",
+                        "source": "水气报装时间"
+                    }, {
+                        "target": "通水气验收平均时间",
+                        "source": "水气报装时间"
+                    }, {
+                        "target": "商标注册平均时间",
+                        "source": "商标注册时间"
+                    }, {
+                        "target": "初审平均时间",
+                        "source": "专利审批时间"
+                    }, {
+                        "target": "优先审查平均时间",
+                        "source": "专利审批时间"
+                    }, {
+                        "target": "专利发证平均时间",
+                        "source": "专利审批时间"
+                    }, {
+                        "target": "工业产品生产许可证平均时间",
+                        "source": "工业产品生产许可证时间"
+                    }, {
+                        "target": "货物通关平均时间",
+                        "source": "货物通关时间"
+                    }, {
+                        "target": "负面清单规定数量",
+                        "source": "市场准入机制"
+                    }, {
+                        "target": "政府采购的总额",
+                        "source": "政府采购"
+                    }, {
+                        "target": "标的数量",
+                        "source": "政府招投标"
+                    }, {
+                        "target": "中标金额",
+                        "source": "政府招投标"
+                    }, {
+                        "target": "政府信息公开总数",
+                        "source": "信息公开"
+                    }, {
+                        "target": "互联网公示条数",
+                        "source": "信息公开"
+                    }, {
+                        "target": "高素质劳动者比例",
+                        "source": "人才供给"
+                    }, {
+                        "target": "投资机构的数量",
+                        "source": "投融资"
+                    }, {
+                        "target": "新增投融资的额度",
+                        "source": "投融资"
+                    }, {
+                        "target": "商业用水价格",
+                        "source": "企业运营成本"
+                    }, {
+                        "target": "商业用电价",
+                        "source": "企业运营成本"
+                    }, {
+                        "target": "物流价格",
+                        "source": "企业运营成本"
+                    }, {
+                        "target": "写字楼房租",
+                        "source": "企业运营成本"
+                    }, {
+                        "target": "税务负担",
+                        "source": "企业运营成本"
+                    }, {
+                        "target": "与企业相关法律裁判文书数量",
+                        "source": "法治环境"
+                    }, {
+                        "target": "失信企业数",
+                        "source": "企业信用"
+                    }, {
+                        "target": "老赖名单的数量",
+                        "source": "企业信用"
+                    }, {
+                        "source": "社会环境",
+                        "target": "人才供给"
+                    }, {
+                        "source": "社会环境",
+                        "target": "投融资"
+                    }, {
+                        "source": "社会环境",
+                        "target": "企业运营成本"
+                    }, {
+                        "source": "社会环境",
+                        "target": "法治环境"
+                    }, {
+                        "source": "社会环境",
+                        "target": "企业信用"
+                    }, {
+                        "source": "政府服务",
+                        "target": "市场准入机制"
+                    }, {
+                        "source": "政府服务",
+                        "target": "政府采购"
+                    }, {
+                        "source": "政府服务",
+                        "target": "政府招投标"
+                    }, {
+                        "source": "政府服务",
+                        "target": "信息公开"
+                    }, {
+                        "source": "营商环境指数",
+                        "target": "行政审批"
+                    }, {
+                        "source": "营商环境指数",
+                        "target": "政府服务"
+                    }, {
+                        "source": "营商环境指数",
+                        "target": "社会环境"
+                    }, {
+                        "source": "行政审批",
+                        "target": "施工许可证时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "用电报装时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "办理纳税时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "不动产登记时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "获得信贷时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "水气报装时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "商标注册时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "专利审批时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "工业产品生产许可证时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "财税优惠办理时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "货物通关时间"
+                    }, {
+                        "source": "行政审批",
+                        "target": "企业开办时间"
+                    }],
+                categories: [
+                    {
+                    'name': '行政审批',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '政府服务',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#25ba8b'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '社会环境',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#ba8725'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '企业开办时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '施工许可证时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '用电报装时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '办理纳税时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '不动产登记时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '获得信贷时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '水气报装时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '商标注册时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '专利审批时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '工业产品生产许可证时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '财税优惠办理时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '货物通关时间',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#1da2df'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '市场准入机制',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#25ba8b'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '政府采购',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#25ba8b'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '政府招投标',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#25ba8b'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '信息公开',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#25ba8b'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '人才供给',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#ba8725'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '投融资',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#ba8725'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '企业运营成本',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#ba8725'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '法治环境',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#ba8725'
+                            }], false)
+                        }
+                    }
+                }, {
+                    'name': '企业信用',
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+                                offset: 0.1,
+                                color: '#061d4b'
+                            }, {
+                                offset: 1,
+                                color: '#ba8725'
+                            }], false)
+                        }
+                    },
+                }, {
+
+                }],
+                focusNodeAdjacency: true,
+                roam: true,
+                lineStyle: {
+                    normal: {
+                        color: 'source',
+                        width: 2,
+                        type: "solid"
+                    }
+                }
+            }]
+        };
+        var gxChart = echarts.init(document.getElementById('gx'));
+        gxChart.setOption(gxOption);
+        setInterval(function () {
+            var line2Chart = echarts.init(document.getElementById('line2'));
+            line2Chart.setOption(line2option);
+            var line3Chart = echarts.init(document.getElementById('line3'));
+            line3Chart.setOption(line3option);
+            var gxChart = echarts.init(document.getElementById('gx'));
+            gxChart.setOption(gxOption);
+            var gauge1Chart = echarts.init(document.getElementById('gauge1'), 'macarons');
+            gauge1Chart.setOption(gauge1Option, true);
+
+            var a = parseInt($(".footerlist span").eq(13).text());
+            var e = parseInt($(".footerlist span").eq(12).find("em").text());
+            var addNum = 1055640700 * 0.1;
+            var addG = [1, 2, 1, 2, 1, 2];
+            $(".footerlist span").eq(13).text(parseInt(a + 9) + 'G');
+            $(".footerlist span").eq(12).find("em").text(e + addNum);
+
+            var f = parseInt($(".footerlist span").eq(2).text());
+            var g = parseInt($(".footerlist span").eq(4).text());
+            var h = parseInt($(".footerlist span").eq(6).text());
+            var i = parseInt($(".footerlist span").eq(8).text());
+            var j = parseInt($(".footerlist span").eq(10).text());
+            var k = parseInt($(".footerlist span").eq(23).text());
+            $(".footerlist span").eq(2).text((f + addG[0]) + 'GB');
+            $(".footerlist span").eq(4).text((g + addG[1]) + 'GB');
+            $(".footerlist span").eq(6).text((h + addG[2]) + 'GB');
+            $(".footerlist span").eq(8).text((i + addG[3]) + 'GB');
+            $(".footerlist span").eq(10).text((j + addG[4]) + 'GB');
+            $(".footerlist span").eq(23).text((k + addG[5]) + 'GB');
+
+
+
+
+        }, 15000);
+
+        var bx = 60;
+
+        setInterval(function () {
+            var zgx = parseInt($(".footerlist span").eq(13).text());
+            if (bx == 100 && (zgx == parseInt(187 + 9) || zgx == parseInt(187 + 18) || zgx == parseInt(187 + 27) || zgx == parseInt(187 + 36))) {
+                bx = 54;
+            }
+            bx = bx + 6;
+            if (bx > 100) {
+                bx = 100;
+            }
+            var zg = parseInt(zgx * bx * 0.01);
+
+            var b = parseInt($(".footerlist span").eq(15).find("em").text());
+            var c = parseInt($(".footerlist span").eq(16).text());
+            var d = parseInt($(".footerlist span").eq(17).text());
+            $(".footerlist span").eq(15).find("em").text(bx);
+            $(".footerlist span").eq(16).text(zg + 'G');
+            $(".footerlist span").eq(17).text(bx + '%');
+        }, 1800)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

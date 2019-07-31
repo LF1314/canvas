@@ -1,0 +1,2103 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>营商环境指数发布系统</title>
+    
+
+    <script type="text/javascript">var basePath="http://yingshang.youedata.com/me";</script>
+    <link rel="stylesheet" href="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/css/index.css">
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/jquery.js"></script>
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/echarts/build/dist/echarts.js"></script>
+    <script src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+<div class="mark-content">
+    <div class="mark-title">
+        <div class="mark-logo"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/logo.png"></div>
+        <div class="mark-nav">
+            <ul>
+                <li><a href="http://yingshang.youedata.com/me/dataBase">数据基础</a></li>
+                <li><a href="http://yingshang.youedata.com/me/indexCalculation">指标计算</a></li>
+                <li><a href="http://yingshang.youedata.com/me/indexRanking">指数排名</a></li>
+                <li><a href="http://yingshang.youedata.com/me/indexAnalyze"   class="on">指数分析</a></li>
+                <li ys-active="social">
+                    <a href="http://yingshang.youedata.com/me/social">社会环境</a>
+                </li>
+                <li ys-active="gov">
+                    <a href="http://yingshang.youedata.com/me/gov">政府服务</a>
+                </li>
+                <li ys-active="admin">
+                    <a href="http://yingshang.youedata.com/me/admin">行政效能</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class='city-shenyang city'>
+        <div class="mark4-l">
+            <div class="w_select">
+                <h1 class="w_selected">
+                    <span>2017年总指数</span>
+                    <i class="w_triangle"></i></h1>
+                
+                    
+                    
+                
+            </div>
+
+
+            <div class="mark4-num">
+                <div id="syAll2017" class="data_2017"><span class="totalData">71</span></div>
+                <div id="syAll2016" class="data_2016" style="display: none"><span class="totalData">63</span></div>
+                <div class="mark4-num-l mark4-num-l-bg"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-icon-address.png" style="vertical-align: sub">
+                    <div class='city-name data_2017'>
+                        <select id="selectcity">
+                            <option class='mark4-num-l-beijing' value="北京">北京</option>
+                            <option class='mark4-num-l-shenyang' value="沈阳" selected>沈阳</option>
+                            <option class='mark4-num-l-nanning' value="南宁">南宁</option>
+                        </select>
+                    </div>
+                    
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    
+                </div>
+                <!--<div class=" mark4-num-l2"><img src="img/bg4-icon-address.png" style="vertical-align: sub;"> 南宁</div>-->
+                <div class="mark4-num-r"></div>
+            </div>
+            <div class="mark4-2">
+                <ul>
+                    <li>
+                        <div class="mark4-2-list"><span class="border-1">行政审批</span></div>
+                        <div class="mark4-title-num num-clo1 data_2017" id="syAdmin2017">87</div>
+                        <div class="mark4-title-num num-clo1 data_2016" id="syAdmin2016" style="display: none">78</div>
+                        <div class="mark4-list-Graphical-1 Graphical">
+                            <div class="gts-1 data_2017" style="height:120.93px; top:20.07px" id="syAdHeight2017"></div>
+                            <div class="gts-1 data_2016" style="height:110.11px; top:30.89px;display: none" id="syAdHeight2016"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mark4-2-list"><span class="border-2">政府服务</span></div>
+                        <div class="mark4-title-num num-clo2 data_2017" id="syGover2017">34</div>
+                        <div class="mark4-title-num num-clo2 data_2016" id="syGover2016" style="display: none">39</div>
+                        <div class="mark4-list-Graphical-2 Graphical">
+                            <div class="gts-2 data_2017" style="height:47.26px; top:92.74px" id="syGoHeight2017"></div>
+                            <div class="gts-2 data_2016" style="height:55px; top:86px;display: none" id="syGoHeight2016"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mark4-2-list"><span class="border-3">社会环境</span></div>
+                        <div class="mark4-title-num num-clo3 data_2017" id="sySocial2017">61</div>
+                        <div class="mark4-title-num num-clo3 data_2016" id="sySocial2016" style="display: none">41</div>
+                        <div class="mark4-list-Graphical-3 Graphical">
+                            <div class="gts-3 data_2017" style="height:84.79px; top:55.21px" id="sySoHeight2017"></div>
+                            <div class="gts-3 data_2016" style="height:58px; top:83px;display: none" id="sySoHeight2016"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h1 id="waringUL">预警列表</h1>
+            <!--<div class="marks-top">行政审批</div>-->
+            <!--<div class="mark4-3 clearfix">-->
+                <!--<ul style="white-space: nowrap" id="administrationUL">-->
+                    <!--<li><span>财税优惠办理时间</span><span>异常</span><span><img src="img/bg4-l-x.png"></span></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="marks-bottom"></div>-->
+           <div id="thisYear" class="data_2017">
+               <div class="governmentWaring">
+                 <div class="marks-top mt10">政府服务</div>
+                  <div class="mark4-3 clearfix">
+                   <ul style="white-space: nowrap" class="governmentUL">
+                    <li><span>市场准入机制</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                    <li><span>政府采购</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                    <li><span>信息公开</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                   </ul>
+                  </div>
+                    <div class="marks-bottom"></div>
+               </div>
+
+               <div class="socialWaring">
+                  <div class="marks-top mt10">社会环境</div>
+                    <div class="mark4-3 clearfix">
+                     <ul style="white-space: nowrap" class="socialUL">
+                       <li><span>投融资</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                       <li><span>企业信用</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                     </ul>
+                    </div>
+                    <div class="marks-bottom"></div>
+               </div>
+           </div>
+
+            <div id="frontYear" style="display: none" class="data_2016">
+               <div class="governmentWaring">
+                <div class="marks-top mt10">政府服务</div>
+                <div class="mark4-3 clearfix">
+                    <ul style="white-space: nowrap" class="governmentUL">
+                        <li><span>政府招投标</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                        <li><span>政府采购</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                        <li><span>信息公开</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                    </ul>
+                </div>
+                <div class="marks-bottom"></div>
+               </div>
+
+               <div class="socialWaring">
+                <div class="marks-top mt10">社会环境</div>
+                <div class="mark4-3 clearfix">
+                    <ul style="white-space: nowrap" class="socialUL">
+                        <li><span>投融资</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                        <li><span>人才供给</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                        <li><span>法治环境</span><span>异常</span><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png"></span></li>
+                    </ul>
+                </div>
+                <div class="marks-bottom"></div>
+               </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mark4-c">
+        <h1>各级指标监控图</h1>
+        <div style=" width: 800px; height: 900px;" id="gxt"></div>
+    </div>
+    <div class="mark4-r">
+        <div class="mark4-r-1">
+            <!--社会环境-->
+            <div class="mark4-r-l-l mark4-r-title data_2017" id="thisSocial">
+                <h1>社会环境评估</h1>
+                <div class="mark4-r-1-main city-beijing city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；人才供给、企业信用方面有比较明显的<span class='word-color'>优势</span>，在企业运营成本和法治环境方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-shenyang city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；法治环境、企业信用方面有比较明显的<span class='word-color'>优势</span>，在人才供给和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-nanning city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用方面有比较明显的<span class='word-color'>优势</span>，在人才供给、法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-chengdu city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业运营成本、法治环境方面有比较明显的<span class='word-color'>优势</span>，在人才供给和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-guiyang city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用方面有比较明显的<span class='word-color'>优势</span>，在投融资和法治环境方面<span class='word-color'>有待改善</span>。
+                </div>
+
+                <div class="mark4-r-1-main city-shenzhen city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；人才供给、投融资方面有比较明显的<span class='word-color'>优势</span>，在法治环境方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-hangzhou city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用、企业运营成本方面有比较明显的<span class='word-color'>优势</span>，在人才供给方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-nanchang city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业运营成本方面有比较明显的<span class='word-color'>优势</span>，在法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-kunming city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用、企业运营成本方面有比较明显的<span class='word-color'>优势</span>，在法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-xian city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用、法治环境方面有比较明显的<span class='word-color'>优势</span>，在人才供给和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-haikou city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用、企业运营成本方面有比较明显的<span class='word-color'>优势</span>，在法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-nanjing city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用、法制环境方面有比较明显的<span class='word-color'>优势</span>，在人才供给和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+
+            </div>
+
+            <div class="mark4-r-l-l mark4-r-title data_2016" id="frontSocial" style="display: none">
+                <h1>社会环境评估</h1>
+                <div class="mark4-r-1-main city-beijing city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；人才供给、投融资、法治环境方面有比较明显的<span class='word-color'>优势</span>，在企业运营成本方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-chengdu city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用方面有比较明显的<span class='word-color'>优势</span>，在投融资和法治环境方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-guiyang city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用方面有比较明显的<span class='word-color'>优势</span>，在投融资和法治环境方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-shenyang city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业运营成本方面有比较明显的<span class='word-color'>优势</span>，在人才供给和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-shenzhen city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用方面有比较明显的<span class='word-color'>优势</span>，在法治环境方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-hangzhou city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；人才供给方面有比较明显的<span class='word-color'>优势</span>，在法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-nanchang city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用、企业运营成本方面有比较明显的<span class='word-color'>优势</span>，在法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-kunming city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用方面有比较明显的<span class='word-color'>优势</span>，在法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-xian city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业运营成本方面有比较明显的<span class='word-color'>优势</span>，在人才供给、法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-haikou city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用方面有比较明显的<span class='word-color'>优势</span>，在法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-xiongan city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用、企业运营成本方方面有比较明显的<span class='word-color'>优势</span>，在法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+                <div class="mark4-r-1-main city-nanning city">
+                    该指标由五个二级指标组成分别为：企业运营成本、投融资、人才供给、企业信用和法治环境；企业信用方面有比较明显的<span class='word-color'>优势</span>，在人才供给、法治环境和投融资方面<span class='word-color'>有待改善</span>。
+                </div>
+            </div>
+
+            <div class="mark4-r-l-r" id="hjpg"></div>
+        </div>
+        <!--政府服务-->
+        <div class="mark4-r-2 mark4-r-title">
+            <h1>政府服务测评</h1>
+            <div class="data_2017" id="thisGovernment">
+                <div class="mark4-r-2-main city-beijing city">
+                    市场准入机制力度很大，信息公开水平<span class='word-color'>欠佳</span>，政府采购意向、政府招投标支持<span class='word-color'>低迷</span>。
+                </div>
+                <div class="mark4-r-2-main city-shenyang city">
+                    政府招投标水平<span class='word-color'>欠佳</span>，信息公开水平、市场准入机制力度、政府采购意向<span class='word-color'>低迷</span>。
+                </div>
+                <div class="mark4-r-2-main city-nanning city">
+                    政府采购意向<span class='word-color'>欠佳</span>，信息公开水平、政府招投标水平、市场准入机制力度<span class='word-color'>低迷</span>。
+                </div>
+                <div class="mark4-r-2-main city-chengdu city">
+                    政府采购意向、信息公开水平很高，政府招投标支持<span class='word-color'>欠佳</span>，市场准入机制<span class='word-color'>低迷</span>。
+                </div>
+                <div class="mark4-r-2-main city-guiyang city">
+                    政府采购意向<span class='word-color'>欠佳</span>，政府招投标支持、信息公开水平<span class='word-color'>低迷</span>，市场准入机制力度严重<span class='word-color'>匮乏</span>。
+                </div>
+
+                <div class="mark4-r-2-main city-shenzhen city">
+                    政府招投标、市场准入机制力度很大,政府采购意向<span class='word-color'>欠佳</span>，信息公开水平<span class='word-color'>低迷</span>。
+                </div>
+                <div class="mark4-r-2-main city-hangzhou city">
+                    市场准入机制状态良好，政府采购意向、信息公开水平<span class='word-color'>低迷</span>,政府招投标支持严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-nanchang city">
+                    政府招投标支持<span class='word-color'>欠佳</span>，政府采购意向、信息公开水平<span class='word-color'>低迷</span>，市场准入机制力度严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-kunming city">
+                    政府招投标支持<span class='word-color'>欠佳</span>，政府采购意向、信息公开水平<span class='word-color'>低迷</span>，市场准入机制力度严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-xian city">
+                    市场准入机制、政府招投标状态良好，信息公开水平<span class='word-color'>低迷</span>，政府采购意向严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-haikou city">
+                    市场准入机制状态良好，政府招投标支持<span class='word-color'>欠佳</span>，政府采购意向、信息公开水平严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-nanjing city">
+                    市场准入机制状态，政府招投标支持，政府采购意向、信息公开水平严重<span class='word-color'>匮乏</span>。
+                </div>
+            </div>
+            <div class="data_2016" id="frontGovernment" style="display: none">
+                <div class="mark4-r-2-main city-beijing city">
+                    市场准入机制力度很大，政府招投标支持<span class='word-color'>欠佳</span>，信息公开水平<span class='word-color'>低迷</span>，政府采购意向严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-chengdu city">
+                    信息公开、政府招投标状态良好，市场准入机制力度<span class='word-color'>低迷</span>，政府采购意向严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-guiyang city">
+                    市场准入机制力度很大，信息公开水平<span class='word-color'>欠佳</span>，政府招投标支持、政府采购意<span class='word-color'>低迷</span>。
+                </div>
+                <div class="mark4-r-2-main city-shenyang city">
+                    市场准入机制状态良好，政府招投标支持<span class='word-color'>低迷</span>，信息公开水平、政府采购意向严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-shenzhen city">
+                    市场准入机制状态良好,政府招投标支持<span class='word-color'>欠佳</span>，信息公开水平<span class='word-color'>低迷</span>，政府采购意向严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-hangzhou city">
+                    市场准入机制状态良好，信息公开水平<span class='word-color'>欠佳</span>，政府采购意向、政府招投标支持<span class='word-color'>低迷</span>。
+                </div>
+                <div class="mark4-r-2-main city-nanchang city">
+                    政府招投标支持<span class='word-color'>低迷</span>，政府采购意向、信息公开水平、市场准入机制力度严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-kunming city">
+                    市场准入机制状态良好，，政府招投标支持<span class='word-color'>低迷</span>，信息公开严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-xian city">
+                    市场准入机制力度很大，政府招投标状态良好，信息公开水平<span class='word-color'>低迷</span>，政府采购意向严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-haikou city">
+                    市场准入机制力度很大，政府采购意向状态很好，政府招投标支持、信息公开水平严重<span class='word-color'>匮乏</span>。
+                </div>
+                <div class="mark4-r-2-main city-xiongan city">
+                    市场准入机制力度很大，政府采购意向、政府招投标支持、信息公开水平<span class='word-color'>欠佳</span>。
+                </div>
+                <div class="mark4-r-2-main city-nanning city">
+                    市场准入机制力度很大，信息公开水平状态很好，政府采购意向、政府招投标支持<span class='word-color'>欠佳</span>。
+                </div>
+            </div>
+
+            <div class="mark4-r-2-r fwpc"></div>
+        </div>
+
+
+
+        <!--行政审批-->
+        <div class="mark4-r-2 mark4-r-title mark4-r-3 data_2017" id="thisAdministration">
+            <h1>行政审批监控</h1>
+            <div class="mark4-r-2-main  city-beijing city">
+                评估政府办事效率,不动产登记、专利审批的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-shenyang">
+                评估政府办事效率,企业开办、用电报装、不动产登记、商标注册、专利审批的行政审批效率<span class='word-color'>低于全国水平</span>,需要提高这个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-nanning">
+                评估政府办事效率,企业开办、用电报装、不动产登记、专利审批的行政审批效率<span class='word-color'>低于全国水平</span>,需要提高这个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main  city-chengdu city">
+                评估政府办事效率,施工许可证、水气报装、专利审批的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-guiyang">
+                评估政府办事效率,施工许可证、水气报装、商标注册、不动产登记、工业产品生产许可证、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+
+            <div class="mark4-r-2-main city city-shenzhen">
+                评估政府办事效率,企业开办、用电报装、水气报装、专利审批、不动产登记的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-hangzhou">
+                评估政府办事效率,施工许可证、水气报装、不动产登记的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-nanchang">
+                评估政府办事效率,用电报装、商标注册、专利审批、工业产品生产许可证的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-kunming">
+                评估政府办事效率,商标注册、专利审批、工业产品生产许可证、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-xian">
+                评估政府办事效率,企业开办、施工许可证、不动产登记的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-haikou">
+                评估政府办事效率,企业开办、水气报装、专利审批、不动产登记、工业产品生产许可证的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-nanjing">
+                评估政府办事效率,企业开办<span class='word-color'>低于全国水平</span>,需要提高这个指标的审批效率。
+            </div>
+            <div class="mark4-r-3-r">
+                <div class="mark4-r-3-title"><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg3-r-3-radio.png">全国</span><span class='city-shenyang city'><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-3-triangle.png"><span class="cityName">沈阳</span></span></div>
+                <div class="mark4-r-3-main txtMarquee-top city-shenyang city">
+                    <ul class="indexGraphAdministration" id="indexGraph" style="white-space: nowrap">
+                        <li><span>企业开办</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 21px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 30px;"></div></li>
+                        <li><span>施工许可证</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 73px;"></div></li>
+                        <li><span>用电报装</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 49px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 51px;"></div></li>
+                        <li><span>办理纳税</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 9px;"></div></li>
+                        <li><span>不动产登记</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 75px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 152px;"></div></li>
+                        <li><span>水气报装</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 86px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 87px;"></div></li>
+                        <li><span>商标注册</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 112px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 159px;"></div></li>
+                        <li><span style="color: #00f9de">专利审批</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle-s.png" style="left: 187px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 183px;"></div></li>
+                        <li><span>工业产品</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 208px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 217px;"></div></li>
+                        <li><span>财税优惠</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 40px;"></div></li>
+                        <li><span>货物通关</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 9px;"></div></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mark4-r-2 mark4-r-title mark4-r-3 data_2016" id="frontAdministration" style="display: none">
+            <h1>行政审批监控</h1>
+            <div class="mark4-r-2-main  city-beijing city">
+                评估政府办事效率,企业开办、水气报装、专利审批、工业产品生产许可证的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main  city-chengdu city">
+                评估政府办事效率,不动产登记、水气报装、工业产品生产许可证、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-guiyang">
+                评估政府办事效率,企业开办、施工许可证、办理纳税、商标注册、不动产登记、工业产品、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-shenyang">
+                评估政府办事效率,企业开办、用电报装、商标注册的行政审批效率<span class='word-color'>低于全国水平</span>,需要提高这个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-shenzhen">
+                评估政府办事效率,企业开办、专利审批、不动产登记、工业产品生产许可证的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-hangzhou">
+                评估政府办事效率,企业开办、商标注册、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-nanchang">
+                评估政府办事效率,企业开办、用电报装、办理纳税、商标注册、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-kunming">
+                评估政府办事效率,企业开办、办理纳税商标注册、不动产登记、商标注册、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-xian">
+                评估政府办事效率,施工许可证、水气报装、商标注册、专利审批、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-haikou">
+                评估政府办事效率,企业开办、施工许可证、水气报装、商标注册、工业产品生产许可证的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-xiongan">
+                评估政府办事效率,企业开办、不动产登记的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-2-main city city-nanning">
+                评估政府办事效率,商标注册、财税优惠办理的行政审批效率均<span class='word-color'>低于全国水平</span>,需要提高这几个指标的审批效率。
+            </div>
+            <div class="mark4-r-3-r">
+                <div class="mark4-r-3-title"><span><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg3-r-3-radio.png">全国</span><span class='city-shenyang city'><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-3-triangle.png"><span class="cityName">沈阳</span></span></div>
+                <div class="mark4-r-3-main txtMarquee-top city-shenyang city">
+                    <ul class="indexGraphAdministration" id="indexGraph2" style="white-space: nowrap">
+                        <li><span style="color: #00f9de">企业开办</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle-s.png" style="left: 187px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 183px;"></div></li>
+                        <li><span>施工许可证</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 73px;"></div></li>
+                        <li><span style="color: #00f9de">用电报装</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle-s.png" style="left: 187px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 183px;"></div></li>
+                        <li><span>办理纳税</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 9px;"></div></li>
+                        <li><span>不动产登记</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 75px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 152px;"></div></li>
+                        <li><span>水气报装</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 86px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 87px;"></div></li>
+                        <li><span style="color: #00f9de">商标注册</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle-s.png" style="left: 187px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 183px;"></div></li>
+                        <li><span>专利审批</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 9px;"></div></li>
+                        <li><span>工业产品</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 208px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 217px;"></div></li>
+                        <li><span>财税优惠</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 40px;"></div></li>
+                        <li><span>货物通关</span><div class="mark4-3-xian"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png" style="left: 9px;"><img src="http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png" style="left: 9px;"></div></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        jQuery(".txtMarquee-top").slide({mainCell:"ul",autoPlay:true,effect:"topMarquee",vis:11,interTime:50,trigger:"click"});
+        var timer=null;
+        var parray = new Array("沈阳","北京","贵阳","深圳","南昌","昆明","海口","成都","杭州","西安","南京","南宁");
+        /*
+         * 保留url上的参数并传递
+         * */
+        var selected = GetQueryString("city") || "沈阳";
+		//var selectedYear = GetQueryString("year");
+
+        //if city= default,select 沈阳;--youlu
+        console.log("seleted is , " + selected);
+        if(selected.toLowerCase()=="default") {
+            selected = "沈阳";
+            console.log("default got, "+selected);
+        }else {
+            //if city is not in the list , select 沈阳;--youlu
+            if( parray.indexOf(selected) > -1){
+                console.log(parray.indexOf(selected));
+            }else{
+                selected = "沈阳";
+                console.log("else , " + selected);
+            }
+        }
+        sessionStorage.setItem('selected', selected);
+        document.cookie = '_currentcity=' + encodeURIComponent(selected);
+        if(selected){
+			
+            $(".mark-nav ul li").each(function(idx){
+                var url = $(this).find("a").attr('href');
+				//var urlYear = selectedYear? '&year='+selectedYear : ''; 
+                $(this).find("a").attr("href", url +'?city='+selected );
+				 //$(this).find("a").attr("href", url +'?city='+selected + urlYear);
+            })
+
+        }
+     /*   $('#selectcity').change(function () {
+            sessionStorage.setItem('selected', $(this).val());
+            document.cookie = '_currentcity=' + encodeURIComponent($(this).val());
+        });*/
+		function changeUrl(){
+			if(selected){
+				$(".mark-nav ul li").each(function(idx){
+		
+					var url = $(this).find("a").attr('href')
+					url = url.split('?')[0];
+					//var urlYear = selectedYear? '&year='+selectedYear : ''; 
+					$(this).find("a").attr("href", url +'?city='+selected);
+					//$(this).find("a").attr("href", url +'?city='+selected + urlYear);
+				})
+
+			}
+		}
+        function GetQueryString(name)
+        {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if( r!==null )return  decodeURI(r[2]); return null;
+        }
+        /*
+         * end
+         * */
+        setTimeout(function(){
+		
+            window.location.href = "http://yingshang.youedata.com/me/social";
+        },59000);//////59000
+        var index=[
+            {
+                administration:["企业开办时间","施工许可证时间","用电报装时间","办理纳税时间","不动产登记时间","获得信贷时间","水气报装时间","商标注册时间","专利审批时间","工业产品生产许可证时间","财税优惠办理时间","货物通关时间"],
+                government:["市场准入机制","政府采购","政府招投标","信息公开"],
+                social:["人才供给","投融资","企业运营成本","法治环境","企业信用"]
+            }
+        ];
+
+        //2016年全国平均审批天数
+        var nationalAverageDays2=[
+            {value:3.38, name:'企业开办'},
+            {value:5.5, name:'施工许可证'},
+            {value:5.6, name:'用电报装'},
+            {value:3, name:'办理纳税'},
+            {value:21.3, name:'不动产登记'},
+            {value:9.275, name:'水汽报装'},
+            {value:17.96, name:'商标注册'},
+            {value:32.14, name:'专利审批'},
+            {value:40, name:'工业产品生产许可证'},
+            {value:12.7, name:'财税优惠办理'},
+            {value:1, name:'货物通关'}
+        ];
+//        2016年各地审批天数
+        var cityAverageDays2=[
+            {
+                cityName:"北京",
+                days: [
+                    {value: 3.6, name: '企业开办'},
+                    {value: 5, name: '施工许可证'},
+                    {value: 4.4, name: '用电报装'},
+                    {value: 1, name: '办理纳税'},
+                    {value: 10, name: '不动产登记'},
+                    {value: 12.5, name: '水汽报装'},
+                    {value: 13, name: '商标注册'},
+                    {value: 48, name: '专利审批'},
+                    {value: 72, name: '工业产品'},
+                    {value: 7, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            },
+            {
+                cityName:"成都",
+                days: [
+                    {value: 2.4, name: '企业开办'},
+                    {value: 5, name: '施工许可证'},
+                    {value: 5.2, name: '用电报装'},
+                    {value: 1, name: '办理纳税'},
+                    {value: 30, name: '不动产登记'},
+                    {value: 9.5, name: '水汽报装'},
+                    {value: 12, name: '商标注册'},
+                    {value: 30, name: '专利审批'},
+                    {value: 43, name: '工业产品'},
+                    {value: 30, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            },
+            {
+                cityName:"贵阳",
+                days:[
+                    {value:16, name:'企业开办'},
+                    {value:8, name:'施工许可证'},
+                    {value:4.6, name:'用电报装'},
+                    {value:8, name:'办理纳税'},
+                    {value:30, name:'不动产登记'},
+                    {value:9.25, name:'水汽报装'},
+                    {value:19, name:'商标注册'},
+                    {value:32.13, name:'专利审批'},
+                    {value:48, name:'工业产品'},
+                    {value:20, name:'财税优惠'},
+                    {value:1, name:'货物通关'}
+                ]
+            },
+            {
+                cityName:"沈阳",
+                days: [
+                    {value: 4.5, name: '企业开办'},
+                    {value: 1, name: '施工许可证'},
+                    {value: 7.2, name: '用电报装'},
+                    {value: 1, name: '办理纳税'},
+                    {value: 11, name: '不动产登记'},
+                    {value: 9, name: '水汽报装'},
+                    {value: 17.97, name: '商标注册'},
+                    {value: 30, name: '专利审批'},
+                    {value: 30, name: '工业产品'},
+                    {value: 2, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            },
+            {
+                cityName:"深圳",
+                days: [
+                    {value: 4.33, name: '企业开办'},
+                    {value: 5, name: '施工许可证'},
+                    {value: 5.6, name: '用电报装'},
+                    {value: 1, name: '办理纳税'},
+                    {value: 30, name: '不动产登记'},
+                    {value: 9.25, name: '水汽报装'},
+                    {value: 10.67, name: '商标注册'},
+                    {value: 33, name: '专利审批'},
+                    {value: 45, name: '工业产品'},
+                    {value: 1, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            },
+            {
+                cityName:"杭州",
+                days: [
+                    {value: 4.2, name: '企业开办'},
+                    {value: 5, name: '施工许可证'},
+                    {value: 5.4, name: '用电报装'},
+                    {value: 1, name: '办理纳税'},
+                    {value: 20, name: '不动产登记'},
+                    {value: 9.25, name: '水汽报装'},
+                    {value: 18, name: '商标注册'},
+                    {value: 18, name: '专利审批'},
+                    {value: 2, name: '工业产品'},
+                    {value: 20, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            },
+            {
+                cityName:"南昌",
+                days:[
+                    {value:8.14, name:'企业开办'},
+                    {value:1, name:'施工许可证'},
+                    {value:8, name:'用电报装'},
+                    {value:10, name:'办理纳税'},
+                    {value:15, name:'不动产登记'},
+                    {value:5.75, name:'水汽报装'},
+                    {value:20, name:'商标注册'},
+                    {value:32.13, name:'专利审批'},
+                    {value:30, name:'工业产品'},
+                    {value:13, name:'财税优惠'},
+                    {value:1, name:'货物通关'}
+                ]
+            },
+            {
+                cityName:"昆明",
+                days: [
+                    {value: 4.17, name: '企业开办'},
+                    {value: 3, name: '施工许可证'},
+                    {value: 4.6, name: '用电报装'},
+                    {value: 5, name: '办理纳税'},
+                    {value: 30, name: '不动产登记'},
+                    {value: 9.25, name: '水汽报装'},
+                    {value: 17.97, name: '商标注册'},
+                    {value: 32.13, name: '专利审批'},
+                    {value: 40, name: '工业产品'},
+                    {value: 20, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            },
+            {
+                cityName:"西安",
+                days:[
+                    {value:3.17, name:'企业开办'},
+                    {value:15, name:'施工许可证'},
+                    {value:5.6, name:'用电报装'},
+                    {value:1, name:'办理纳税'},
+                    {value:20, name:'不动产登记'},
+                    {value:9.5, name:'水汽报装'},
+                    {value:33, name:'商标注册'},
+                    {value:36, name:'专利审批'},
+                    {value:30, name:'工业产品'},
+                    {value:13, name:'财税优惠'},
+                    {value:1, name:'货物通关'}
+                ]
+            },
+            {
+                cityName:"海口",
+                days:[
+                    {value:4, name:'企业开办'},
+                    {value:7, name:'施工许可证'},
+                    {value:5.4, name:'用电报装'},
+                    {value:1, name:'办理纳税'},
+                    {value:17, name:'不动产登记'},
+                    {value:9.5, name:'水汽报装'},
+                    {value:17.97, name:'商标注册'},
+                    {value:30, name:'专利审批'},
+                    {value:60, name:'工业产品'},
+                    {value:1, name:'财税优惠'},
+                    {value:1, name:'货物通关'}
+                ]
+            },
+            {
+                cityName:"雄安",
+                days:[
+                    {value:4.9, name:'企业开办'},
+                    {value:1, name:'施工许可证'},
+                    {value:5.2, name:'用电报装'},
+                    {value:1, name:'办理纳税'},
+                    {value:30, name:'不动产登记'},
+                    {value:3.5, name:'水汽报装'},
+                    {value:17.6, name:'商标注册'},
+                    {value:32, name:'专利审批'},
+                    {value:5, name:'工业产品'},
+                    {value:1, name:'财税优惠'},
+                    {value:1, name:'货物通关'}
+                ]
+            },
+            {
+                cityName:"南宁",
+                days:[
+                    {value:3, name:'企业开办'},
+                    {value:5, name:'施工许可证'},
+                    {value:3.6, name:'用电报装'},
+                    {value:1, name:'办理纳税'},
+                    {value:18, name:'不动产登记'},
+                    {value:9.25, name:'水汽报装'},
+                    {value:37, name:'商标注册'},
+                    {value:32.13, name:'专利审批'},
+                    {value:30, name:'工业产品'},
+                    {value:20, name:'财税优惠'},
+                    {value:1, name:'货物通关'}
+                ]
+            }
+
+
+        ];
+//        2016年数据
+        var allData2=[
+            {
+                name:"北京",
+                value:[71,71,46,94],
+                data:{
+                    administration:[0.70879902,0.79999999,0.85015373,1,1,0.3,0.55122503,0.92686568,0.3,0.3,0.85517238,1],
+                    government:[0.91152413,0.3,0.61009363,0.38621984],
+                    social:[1,1,0.365723336,1,0.75685913]
+                },
+                status:{
+                    administration:[0,0,1,1,1,-1,0,1,-1,-1,1,1],
+                    government:[1,-1,0,-1],
+                    social:[1,1,-1,1,0]
+                },
+                warning:{
+                    administration:["获得信贷时间","专利审批时间","工业产品生产许可证时间"],
+                    government:["政府采购","信息公开"],
+                    social:["企业运营成本"]
+                }
+            },
+            {
+                name:"成都",
+                value:[57,59,57,48],
+                data:{
+                    administration:[0.82545836,0.79999999,0.81416239,1,0.3,0.3,0.61858694,0.95820895,0.72,0.58999999,0.3,1],
+                    government:[0.46654274,0.330093382,0.88465883,0.70784947],
+                    social:[0.62027555,0.38292508,0.68143756,0.412837872,0.81349718]
+                },
+                status:{
+                    administration:[0,0,0,1,-1,-1,0,1,0,0,-1,1],
+                    government:[0,-1,1,0],
+                    social:[0,-1,0,-1,0]
+                },
+                warning:{
+                    administration:["不动产登记时间","获得信贷时间","财税优惠办理时间"],
+                    government:["政府采购"],
+                    social:["投融资","法治环境"]
+                }
+            },
+            {
+                name:"贵阳",
+                value:[57,63,52,44],
+                data:{
+                    administration:[0.9826596,0.65,0.92052256,0.45555554,0.3,0.65,0.70997264,0.73880599,0.67022223,0.53999997,0.54137932,1],
+                    government:[0.99739775,0.45206141,0.42969236,0.55428305],
+                    social:[0.59327389,0.329651559,0.77397021,0.310757747,0.99558398]
+                },
+                status:{
+                    administration:[1,0,1,0,-1,0,0,0,0,0,0,1],
+                    government:[1,0,-1,0],
+                    social:[0,-1,0,-1,1]
+                },
+                warning:{
+                    administration:["不动产登记时间"],
+                    government:["政府招投标"],
+                    social:["投融资","法治环境"]
+                }
+
+            },
+            {
+                name:"沈阳",
+                value:[63,78,39,41],
+                data:{
+                    administration:[0.66666133,1,0.47241497,1,0.965,0.65,0.58690501,0.77119401,0.72,0.72,0.97586204,1],
+                    government:[0.77360593,0.302845646,0.43466957,0.360942203],
+                    social:[0.3,0.337731624,0.70489267,0.430739805,0.67608662]
+                },
+                status:{
+                    administration:[0,1,0,1,1,0,0,0,0,0,1,1],
+                    government:[0,-1,-1,-1],
+                    social:[-1,-1,0,-1,0]
+                },
+                warning:{
+                    administration:[],
+                    government:["政府招投标","政府采购","信息公开"],
+                    social:["投融资","人才供给","法治环境"]
+                }
+            },
+            {
+                name:"深圳",
+                value:[64,67,47,71],
+                data:{
+                    administration:[0.7210444,0.79999999,0.78064072,1,0.3,0.65,0.70997264,1,0.65,0.57000001,1,1],
+                    government:[0.83605951,0.372040106,0.53142602,0.45108912],
+                    social:[0.7778606,0.78195805,0.65987483,0.538933366,0.8593581]
+                },
+                status:{
+                    administration:[0,0,0,1,-1,0,0,1,0,0,1,1],
+                    government:[0,-1,0,0],
+                    social:[0,0,0,0,1]
+                },
+                warning:{
+                    administration:["不动产登记时间"],
+                    government:["政府采购"],
+                    social:[]
+                }
+            },
+            {
+                name:"杭州",
+                value:[67,77,54,50],
+                data:{
+                    administration:[0.65476693,0.79999999,0.79501074,1,0.65,1,0.70997264,0.77014926,1,1,0.54137932,1],
+                    government:[0.77360593,0.454655703,0.53142602,0.63566442],
+                    social:[0.76628848,0.44153055,0.62292533,0.431545456,0.50879327]
+                },
+                status:{
+                    administration:[0,0,0,1,0,1,0,0,1,1,0,1],
+                    government:[0,0,0,0],
+                    social:[0,-1,0,-1,0]
+                },
+                warning:{
+                    administration:[],
+                    government:[],
+                    social:["投融资","法治环境"]
+                }
+            },
+            {
+                name:"南昌",
+                value:[59,72,32,43],
+                data:{
+                    administration:[0.70681991,1,0.5814217,0.3,0.825,0.65,0.87433383,0.70746272,0.67022223,0.72,0.71034483,1],
+                    government:[0.3,0.310212656,0.365856042,0.309225146],
+                    social:[0.59327389,0.325204977,0.79585186,0.340258617,0.80778462]
+                },
+                status:{
+                    administration:[0,1,0,-1,0,0,1,0,0,0,0,1],
+                    government:[-1,-1,-1,-1],
+                    social:[0,-1,0,-1,0]
+                },
+                warning:{
+                    administration:["办理纳税时间"],
+                    government:["市场准入机制","政府采购","政府招投标","信息公开"],
+                    social:["投融资","法治环境"]
+                }
+            },
+            {
+                name:"昆明",
+                value:[56,63,54,40],
+                data:{
+                    administration:[0.75138436,0.90000003,0.92052256,0.68888892,0.3,0.65,0.70997264,0.77119401,0.67022223,0.62000003,0.54137932,1],
+                    government:[0.77360593,0.649070025,0.418174,0.351282574],
+                    social:[0.39529982,0.302197903,0.73400784,0.342237195,0.91848059]
+                },
+                status:{
+                    administration:[0,1,1,0,-1,0,0,0,0,0,0,1],
+                    government:[0,0,-1,-1],
+                    social:[-1,-1,0,-1,1]
+                },
+                warning:{
+                    administration:["不动产登记时间"],
+                    government:["政府招投标","信息公开"],
+                    social:["人才供给","投融资","法治环境"]
+                }
+            },
+            {
+                name:"西安",
+                value:[64,73,56,41],
+                data:{
+                    administration:[0.79077749,0.3,0.78064072,1,0.65,1,0.86527611,0.3,0.58,0.72,0.71034483,1],
+                    government:[0.91152413,0.375578105,0.7331544,0.5609698],
+                    social:[0.38395464,0.327706336,0.93293692,0.372294908,0.67484937]
+                },
+                status:{
+                    administration:[0,-1,0,1,0,1,1,-1,0,0,0,1],
+                    government:[1,-1,0,0],
+                    social:[-1,-1,1,-1,0]
+                },
+                warning:{
+                    administration:["施工许可证时间","商标注册时间"],
+                    government:["政府采购"],
+                    social:["人才供给","投融资","法治环境"]
+                }
+            },
+            {
+                name:"海口",
+                value:[66,73,70,39],
+                data:{
+                    administration:[0.69145855,0.70000002,0.79501074,1,0.755,0.65,0.63701185,0.77119401,0.72,0.42000002,1,1],
+                    government:[1,1,0.37489944,0.37142527],
+                    social:[0.45724471,0.300915482,0.61583986,0.3,0.95584113]
+                },
+                status:{
+                    administration:[0,0,0,1,0,0,0,0,0,-1,1,1],
+                    government:[1,1,-1,-1],
+                    social:[0,-1,0,-1,1]
+                },
+                warning:{
+                    administration:["工业产品生产许可证时间"],
+                    government:["政府招投标","信息公开"],
+                    social:["投融资","法治环境"]
+                }
+            },
+            {
+                name:"雄安",
+                value:[69,75,54,68],
+                data:{
+                    administration:[0.6129138,1,0.7407324,1,0.5,0.75,0.8614841,0.8452915,0.7666667,0.9785714,1,1],
+                    government:[0.804,0.5,0.5,0.5],
+                    social:[0.7430742,0.5,0.8128419,0.5,0.9381342]
+                },
+                status:{
+                    administration:[0,1,0,1,-1,0,1,1,0,1,1,1],
+                    government:[1,-1,-1,-1],
+                    social:[0,-1,1,-1,1]
+                },
+                warning:{
+                    administration:["不动产登记时间"],
+                    government:["政府采购","政府招投标","信息公开"],
+                    social:["投融资","法治环境"]
+                }
+            },
+            {
+                name:"南宁",
+                value:[75,84,67,56],
+                data:{
+                    administration:[0.8661809,0.8571429,0.9589607,1,0.8,1,0.7928377,0.5,0.9407408,0.8,0.6724138,1],
+                    government:[0.83829,0.6104683,0.6653041,0.7339146],
+                    social:[0.5,0.5071809,0.6887605,0.5383867,0.8672346]
+                },
+                status:{
+                    administration:[1,1,1,1,0,1,1,-1,1,0,1,1],
+                    government:[0,0,0,0],
+                    social:[-1,-1,0,-1,1]
+                },
+                warning:{
+                    administration:["商标注册时间"],
+                    government : [],
+                    social:["人才供给","投融资","法治环境"]
+                }
+            }
+        ];
+
+//        2017全国平均审批天数
+        var nationalAverageDays=[
+            {value:0.85, name:'企业开办'},
+            {value:1.7, name:'施工许可证'},
+            {value:0.68, name:'用电报装'},
+            {value:1, name:'办理纳税'},
+            {value:0.3, name:'不动产登记'},
+//            {value:1,name:'获得信贷'},
+            {value:0.76, name:'水汽报装'},
+            {value:0.81, name:'商标注册'},
+            {value:0.39, name:'专利审批'},
+            {value:1, name:'工业产品生产许可证'},
+            {value:1, name:'财税优惠办理'},
+            {value:1, name:'货物通关'}
+        ];
+//        2017各地审批天数
+        var cityAverageDays=[
+            {
+                cityName:"北京",
+                days: [
+                    {value: 0.81, name: '企业开办'},
+                    {value: 0.65, name: '施工许可证'},
+                    {value: 0.68, name: '用电报装'},
+                    {value: 1, name: '办理纳税'},
+                    {value: 0.92, name: '不动产登记'},
+//                    {value: 1, name: '获得信贷'},
+                    {value: 0.57, name: '水汽报装'},
+                    {value: 0.65, name: '商标注册'},
+                    {value: 0.72, name: '专利审批'},
+                    {value: 0.3, name: '工业产品'},
+                    {value: 1, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            },
+            {
+                cityName:"沈阳",
+                days: [
+                    {value: 0.94, name: '企业开办'},
+                    {value: 1, name: '施工许可证'},
+                    {value: 0.76, name: '用电报装'},
+                    {value: 1, name: '办理纳税'},
+                    {value: 0.89, name: '不动产登记'},
+//                    {value: 1, name: '获得信贷'},
+                    {value: 0.66, name: '水汽报装'},
+                    {value: 1, name: '商标注册'},
+                    {value: 0.57, name: '专利审批'},
+                    {value: 0.69, name: '工业产品'},
+                    {value: 1, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            },
+            {
+                cityName:"南宁",
+                days: [
+                    {value: 0.87, name: '企业开办'},
+                    {value: 0.8, name: '施工许可证'},
+                    {value: 0.92, name: '用电报装'},
+                    {value: 1, name: '办理纳税'},
+                    {value: 0.62, name: '不动产登记'},
+//                    {value: 1, name: '获得信贷'},
+                    {value: 0.76, name: '水汽报装'},
+                    {value: 0.5, name: '商标注册'},
+                    {value: 0.71, name: '专利审批'},
+                    {value: 0.74, name: '工业产品'},
+                    {value: 0.57, name: '财税优惠'},
+                    {value: 1, name: '货物通关'}
+                ]
+            }
+
+        ];
+        //2017数据
+        var allData=[
+            {
+                name:"北京",
+                value:[71,79,40,77],
+                data:{
+                    administration:[0.8086739,0.65,0.678356314,1,0.919230769,1,0.572814761,0.65,0.717741935,0.3,1,1],
+                    government:[0.844701987,0.301866639,0.320826772,0.493285407],
+                    social:[1,0.865975338,0.401408711,0.56285209,0.957583825]
+                },
+                status:{
+                    administration:[0,0,0,1,1,1,0,0,0,-1,1,1],
+                    government:[1,-1,-1,0],
+                    social:[1,1,-1,0,0]
+                },
+                warning:{
+                    administration:["工业产品生产许可证时间"],
+                    government:["政府采购","政府招投标"],
+                    social:["企业运营成本"]
+                }
+            },
+            {
+                name:"沈阳",
+                value:[71,87,34,61],
+                data:{
+                    administration:[0.937167623,1,0.75597566,1,0.892307692,1,0.659680042,1,0.570967742,0.686567164,1,1],
+                    government:[0.3,0.300712879,0.414039478,0.342645944],
+                    social:[0.453524557,0.324205027,0.64602737,1,0.932488704]
+                },
+                status:{
+                    administration:[1,1,1,1,1,1,0,1,0,0,1,1],
+                    government:[-1,-1,0,-1],
+                    social:[0,-1,0,1,-1]
+                },
+                warning:{
+                    administration:[],
+                    government:["市场准入机制","政府采购","信息公开"],
+                    social:["投融资","企业信用"]
+                }
+            },
+            {
+                name:"南宁",
+                value:[63,77,40,43],
+                data:{
+                    administration:[0.870491898,0.8,0.9153315,1,0.623076923,1,0.760189392,0.5,0.706451613,0.73880597,0.570967742,1],
+                    government:[0.3,0.463472437,0.356139895,0.386948419],
+                    social:[0.312312272,0.373864201,0.618000239,0.387856575,0.966547651]
+                },
+                status:{
+                    administration:[1,1,1,1,1,1,0,1,0,0,1,1],
+                    government:[-1,-1,0,-1],
+                    social:[0,-1,0,1,-1]
+                },
+                warning:{
+                    administration:[],
+                    government:["市场准入机制","政府采购","信息公开"],
+                    social:["投融资","企业信用"]
+                }
+            },
+
+        ];
+
+
+
+        /*
+        * 和弦图矩阵生成
+        */
+
+        var allMatrixLevel1_2016 = [], //存储2016年所有城市正常的矩阵 0
+            allMatrixLevel2_2016 =[],//存储2016年所有城市预警的矩阵 -1
+            allMatrixLevel3_2016 =[],//存储2016年所有城市良好的矩阵 1
+            allMatrixLevel1_2017 = [], //存储2017年所有城市正常的矩阵 0
+            allMatrixLevel2_2017 =[],//存储2017年所有城市预警的矩阵 -1
+            allMatrixLevel3_2017 =[];//存储2017年所有城市良好的矩阵 1
+        initMatrix(allData, allMatrixLevel1_2017, allMatrixLevel2_2017, allMatrixLevel3_2017);
+        initMatrix(allData2, allMatrixLevel1_2016, allMatrixLevel2_2016, allMatrixLevel3_2016);
+
+        var allMatrixLevel1 = allMatrixLevel1_2017, //存储当前所选年份所有城市正常的矩阵 --> 默认为2017年
+            allMatrixLevel2 = allMatrixLevel2_2017,//存储当前所选年份所有城市预警的矩阵 --> 默认为2017年
+            allMatrixLevel3 = allMatrixLevel3_2017;//存储当前所选年份所有城市良好的矩阵 --> 默认为2017年
+
+        function initMatrix(allData, allMatrixLevel1, allMatrixLevel2, allMatrixLevel3){
+
+            allData.forEach(function(data, idx){
+
+                //将城市状态数据存为二维数组
+                var statusData = [];
+                exchangeItemInArray(data.status.administration, 9, 11);
+                exchangeItemInArray(data.status.social, 3, 4);
+                data.status.administration.unshift(0);
+                data.status.government.unshift(0);
+                data.status.social.unshift(0);
+                statusData.push(data.status.administration, data.status.social, data.status.government);
+
+
+                var _matrix1 = [],
+                    _matrix2 = [],
+                    _matrix3 = [];
+
+                var L1 = statusData[0].length;
+                var L2 = statusData[1].length;
+                var L3 = statusData[2].length;
+                var allItemsLength = L1 + L2 + L3;
+                for(var i = 0 ; i<allItemsLength; i++){
+                    var row1 = [],
+                        row2 = [],
+                        row3 = [];
+                    function setData(item){
+                        switch (item) {
+                            case 0 : {
+                                row1[j] = 10;
+                                break;
+                            }
+                            case -1 : {
+                                row2[j] = 5;
+                                break;
+                            }
+                            case 1 : {
+                                row3[j] = 5;
+                                break;
+                            }
+                        }
+                    }
+                    function setData_1(item){
+                        switch (item) {
+                            case 0 : {
+                                row1[j] = 10;
+                                break;
+                            }
+                            case -1 : {
+                                row2[j] = 10;
+                                break;
+                            }
+                            case 1 : {
+                                row3[j] = 10;
+                                break;
+                            }
+                        }
+                    }
+                    for(var j = 0 ; j < allItemsLength; j++){
+                        //默认所有数据为0
+                        row1[j] = row2[j] = row3[j] = 0;
+
+                        //矩阵第一类第一行
+                        if(i === 0){
+                            if(j === 0){
+                                continue;
+                            }
+                            setData_1(statusData[0][j]);
+                            continue;
+                        }
+
+                        //矩阵第一类
+                        if(i < L1){
+                            if( j > 0 ){
+                                continue ;
+                            }
+                            row1[0] = 5;
+                            setData(statusData[0][i]);
+                            continue;
+                        }
+
+                        //矩阵第二类第一行
+                        if(i === L1){
+                            if( j <= L1){
+                                continue;
+                            }
+                            setData_1(statusData[1][j-L1]);
+                            continue;
+                        }
+                        //矩阵第二类
+                        if(i < L1 + L2){
+                            if( j !== L1 ){
+                                continue ;
+                            }
+
+                            row1[j] = 5;
+                            setData(statusData[1][i-L1]);
+                            continue;
+                        }
+                        //矩阵第三类第一行
+                        if(i === L1 + L2){
+                            if(j <= L1 + L2){
+                                continue;
+                            }
+                            setData_1(statusData[2][j-L1-L2]);
+                            continue;
+                        }
+                        //矩阵第三类
+                        if(i <  L1 + L2 + L3){
+                            if( j !== L1 + L2 ){
+                                continue ;
+                            }
+                            row1[j] = 5;
+                            setData(statusData[2][i-L1-L2]);
+                            continue;
+                        }
+
+                    }
+
+                    //贵阳数据bug修改
+//                    if(row1.indexOf(10) < 0 &&
+//                        row1.indexOf(5)<0){
+//                        row1 =  [0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,7, 0,0,0,0,0];
+//                    }
+
+                    if(row1.indexOf(10) < 0 &&
+                        row1.indexOf(5)<0){
+                        var data_government_test = $.extend([], data.status.government);
+                        data_government_test.shift(0);
+                        var data_social_test = $.extend([], data.status.social);
+                        data_social_test.shift(0);
+                        var data_administration_test = $.extend([], data.status.administration);
+                        data_social_test.shift(0);
+                        if(data_government_test.indexOf(0) < 0){
+                            row1 =  [0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,7, 0,0,0,0,0];
+                        }
+                        if(data_social_test.indexOf(0) < 0){
+                            row1 =  [0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,7, 0,0,0,0,0];
+                        }
+                        if(data_administration_test.indexOf(0) < 0){
+                            row1 =  [0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0, 0,0,0,0,7];
+
+                        }
+                    }
+
+
+                    _matrix1.push(row1);
+                    _matrix2.push(row2);
+                    _matrix3.push(row3);
+                }
+
+
+                allMatrixLevel1.push(_matrix1);
+                allMatrixLevel2.push(_matrix2);
+                allMatrixLevel3.push(_matrix3);
+
+
+
+            })
+
+        }
+
+
+        //数据录入时顺序不对，调整
+        function exchangeItemInArray(arrayName, idx1, idx2){
+            var num = arrayName[idx1];
+            arrayName[idx1] = arrayName[idx2];
+            arrayName[idx2] = num;
+        }
+        /*
+         * 和弦图矩阵生成 -- end
+         */
+
+        var selectedIndex;
+
+
+
+        selectEvent (selected, allData, cityAverageDays,nationalAverageDays);
+
+        var initALlDatas=function ( allDatas,averageDays,allAverageDays) {
+			
+            selectEvent (selected, allDatas,averageDays,allAverageDays);
+            $(".city-name select").change(function(){
+                selected = $(this).val();
+                selectEvent (selected, allDatas,averageDays,allAverageDays);
+				changeUrl();
+            });
+
+
+        };
+        function selectEvent (selected, allDatas,averageDays,allAverageDays){
+            $.each(allDatas, function(idx, data){
+                if( selected === data.name){
+                    selectedIndex = idx;
+                    $(".cityName").html(data.name);
+                    $(".city-name select").val(data.name);
+                    $(".totalData").text(allDatas[idx].value[0]);
+                    $(".mark4-title-num.num-clo1").html(allDatas[idx].value[1]);
+                    $(".mark4-title-num.num-clo2").html(allDatas[idx].value[2]);
+                    $(".mark4-title-num.num-clo3").html(allDatas[idx].value[3]);
+                    //改变柱状图高度
+                    var height1=141*allDatas[idx].value[1]/100;
+                    var top1=141-height1;
+                    var mycss1 = {
+                        height: height1+"px",
+                        top: top1+"px"
+                    };
+                    $(".gts-1").css(mycss1);
+
+                    var height2=141*allDatas[idx].value[2]/100;
+                    var top2=141-height2;
+                    var mycss2 = {
+                        height: height2+"px",
+                        top: top2+"px"
+                    };
+                    $(".gts-2").css(mycss2);
+
+                    var height3=141*allDatas[idx].value[3]/100;
+                    var top3=141-height3;
+                    var mycss3 = {
+                        height: height3+"px",
+                        top: top3+"px"
+                    };
+                    $(".gts-3").css(mycss3);
+
+                    //预警列表
+                    //1.行政审批
+                    var administration=allDatas[idx].warning.administration;
+                    $("#myDiv").remove();
+                    if(administration.length>0){
+
+                        var ul="<div id='myDiv'>"
+                            +"<div class='marks-top'>行政审批</div>"
+                            +"<div class='mark4-3 clearfix'>"
+                            +"<ul style='white-space: nowrap' id='administrationUL'>"
+                            +"</ul>"
+                            +"</div>"
+                            +"<div class='marks-bottom'></div>"
+                            +"</div>";
+                        $("#waringUL").after(ul);
+
+                        $("#administrationUL").empty();
+                        $.each(administration,function (idx, data) {
+                            var text=administration[idx];
+                            var li="<li><span>"+text+"</span><span>异常</span><span><img src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png'></span></li>";
+                            $("#administrationUL").append(li);
+                        });
+                    }
+                    //2.政府服务
+                    var government=allDatas[idx].warning.government;
+                    $(".governmentWaring").remove();
+                    $("#myDiv2").remove();
+                    if(government.length>0){
+                        var ul2="<div id='myDiv2'>"
+                            +"<div class='marks-top mt10'>政府服务</div>"
+                            +"<div class='mark4-3 clearfix'>"
+                            +"<ul style='white-space: nowrap' id='governmentUL'>"
+                            +"</ul>"
+                            +"</div>"
+                            +"<div class='marks-bottom'></div>"
+                            +"</div>";
+                        if($("#myDiv").length>0){
+                            $("#myDiv").after(ul2);
+                        }else
+                        {
+                            $("#waringUL").after(ul2);
+                        }
+
+                        $("#governmentUL").empty();
+                        $.each(government,function (idx, data) {
+                            var text=government[idx];
+                            var li="<li><span>"+text+"</span><span>异常</span><span><img src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png'></span></li>";
+                            $("#governmentUL").append(li);
+                        });
+                    }
+
+
+                    //3.社会环境
+                    var social=allDatas[idx].warning.social;
+                    $(".socialWaring").remove();
+                    $("#myDiv3").remove();
+                    if(social.length>0){
+                        var ul3="<div id='myDiv3'>"
+                            +"<div class='marks-top mt10'>社会环境</div>"
+                            +"<div class='mark4-3 clearfix'>"
+                            +"<ul style='white-space: nowrap' id='socialUL'>"
+                            +"</ul>"
+                            +"</div>"
+                            +"<div class='marks-bottom'></div>"
+                            +"</div>";
+                        if($("#myDiv2").length>0){
+                            $("#myDiv2").after(ul3);
+                        }else if($("#myDiv2").length<=0&&$("#myDiv").length>0){
+                            $("#myDiv").after(ul3);
+                        }else {
+                            $("#waringUL").after(ul3);
+                        }
+
+                        $("#socialUL").empty();
+                        $.each(social,function (idx, data) {
+                            var text=social[idx];
+                            var li="<li><span>"+text+"</span><span>异常</span><span><img src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-l-x.png'></span></li>";
+                            $("#socialUL").append(li);
+                        });
+                    }
+
+
+                    //社会环境评估 //政府服务评测
+                    $(".mark4-r-1-main").css("display","none");
+                    $(".mark4-r-2-main").css("display","none");
+                    var cityClass;
+                    if(data.name=="北京"){
+                        cityClass=".city-beijing";
+                    }
+                    if(data.name=="南宁"){
+                        cityClass=".city-nanning";
+                    }
+                    if(data.name=="成都"){
+                        cityClass=".city-chengdu";
+                    }
+                    if(data.name=="贵阳"){
+                        cityClass=".city-guiyang";
+                    }
+                    if(data.name=="杭州"){
+                        cityClass=".city-hangzhou";
+                    }
+                    if(data.name=="深圳"){
+                        cityClass=".city-shenzhen";
+                    }
+                    if(data.name=="南昌"){
+                        cityClass=".city-nanchang";
+                    }
+                    if(data.name=="沈阳"){
+                        cityClass=".city-shenyang";
+                    }
+                    if(data.name=="西安"){
+                        cityClass=".city-xian";
+                    }
+                    if(data.name=="昆明"){
+                        cityClass=".city-kunming";
+                    }
+                    if(data.name=="海口"){
+                        cityClass=".city-haikou";
+                    }
+                    if(data.name=="雄安"){
+                        cityClass=".city-xiongan";
+                    }if(data.name=="南宁"){
+                        cityClass=".city-nanning";
+                    }if(data.name=="南京"){
+                        cityClass=".city-nanjing";
+                    }
+
+                    $(cityClass).css("display","block");
+                    clearInterval(timer);
+                    var my_data_government=[];
+                    for(var j=0;j<allDatas[idx].data.government.length;j++){
+                        my_data_government.push(Math.round(allDatas[idx].data.government[j]*100))
+                    }
+                    var my_data_society=[
+                        {value:57, name:'人才供给'},
+                        {value:35, name:'投融资'},
+                        {value:67, name:'企业运营成本'},
+                        {value:31, name:'法治环境'},
+                        {value:88, name:'企业信用'}
+                    ];
+                    for(var k=0;k<allDatas[idx].data.social.length;k++){
+                        var value=Math.round(allDatas[idx].data.social[k]*100);
+                        my_data_society[k].value=value;
+                    }
+                    initSocity(my_data_society,my_data_government,allMatrixLevel1[selectedIndex],allMatrixLevel2[selectedIndex],allMatrixLevel3[selectedIndex]);
+
+                    //行政审批监控
+                    $.each(averageDays,function (index, cityData) {
+                        if(selected==cityData.cityName){
+                            $(".indexGraphAdministration").empty();
+                            for(var h=0;h<averageDays[index].days.length;h++){
+                                var name=averageDays[index].days[h].name;
+                                var lenght1;//当前城市审批监控图形距离左边像素
+                                var length2;//全国平均审批监控图形距离左边像素
+                                if(averageDays[index].days[h].value<=1.7){
+                                    lenght1=averageDays[index].days[h].value*200/1.7;
+                                    length2=allAverageDays[h].value*200/1.7;
+                                }else{
+                                    lenght1=averageDays[index].days[h].value*200/1.7+200;
+                                    length2=allAverageDays[h].value*200/1.7+200;
+                                }
+                                if(allAverageDays[h].value<averageDays[index].days[h].value){
+                                    //当前城市大于全国平均天数
+                                    var li="<li><span style='color: #00f9de'>"+name+"</span><div class='mark4-3-xian'><img src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle-s.png'style='left: "+lenght1+"px;'><img src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png' style='left: "+length2+"px;'></div></li>";
+                                    $(".indexGraphAdministration").append(li);
+                                }else {
+                                    //当前城市小于等于全国平均天数
+                                    var li="<li><span>"+name+"</span><div class='mark4-3-xian'><img src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-triangle.png' style='left: "+lenght1+"px;'><img src='http://yingshang.youedata.com/me/jsp/yingshangzhishu1/img/bg4-r-4-radio-y.png' style='left: "+length2+"px;'></div></li>";
+                                    $(".indexGraphAdministration").append(li);
+                                }
+                            }
+                            $(".indexGraphAdministration").append($(".indexGraphAdministration").clone(true).children());
+                        }
+                    })
+                }
+            });
+        }
+	
+		/*if(selectedYear == 2016){
+			changeYear(true);
+		}else{
+			//默认初始化2017年的数据
+			
+		}
+        */
+		initALlDatas(allData,cityAverageDays,nationalAverageDays);
+        
+        //点击切换年份，初始化对应年份的数据
+        $('.w_select').click(function(e){
+            $(this).toggleClass('active');
+            if(e.target.nodeName ==='H1' || e.target.parentNode.nodeName === 'H1') {
+                if ($('.w_selected span').text() !== $(e.target).text()) {
+                    $('.w_selected span').text($(e.target).text());
+					changeYear($('.w_selected span').text($(e.target).text()).html() == "2016年总指数")
+                    //切换年份 初始化数据
+                    
+
+                }
+                e.stopPropagation();
+            }
+        });
+		
+		
+		function changeYear(condition){
+		
+			if (condition) {
+				$('.w_selected span').text("2016年总指数");
+						//selectedYear = 2016;
+						changeUrl();
+                        allMatrixLevel1 = allMatrixLevel1_2016;
+                        allMatrixLevel2 = allMatrixLevel2_2016;
+                        allMatrixLevel3 = allMatrixLevel3_2016;
+                        //隐藏2017年数据
+                        $(".data_2017").css("display", "none");
+                        //显示2016年的数据
+                        $(".data_2016").css("display", "block");
+
+                        $(".mark4-r-1-main").css("display", "none");
+                        $(".mark4-r-2-main").css("display", "none");
+                        clearInterval(timer);
+                        $(".city-shenyang").css("display", "block");
+                        initALlDatas(allData2, cityAverageDays2, nationalAverageDays2);
+                    } else {
+						//selectedYear = 2017;
+						changeUrl();
+                        allMatrixLevel1 = allMatrixLevel1_2017;
+                        allMatrixLevel2 = allMatrixLevel2_2017;
+                        allMatrixLevel3 = allMatrixLevel3_2017;
+                        //隐藏2016年数据
+                        $(".data_2016").css("display", "none");
+                        //显示2017年的数据
+                        $(".data_2017").css("display", "block");
+
+
+                        $(".mark4-r-1-main").css("display", "none");
+                        $(".mark4-r-2-main").css("display", "none");
+                        clearInterval(timer);
+                        $(".city-shenyang").css("display", "block");
+                        initALlDatas(allData, cityAverageDays, nationalAverageDays);
+                    }
+		}
+        $(document).on('click',function(){
+            if( $('.w_select').hasClass('active')){
+                $('.w_select').removeClass('active');
+            }
+
+        });
+
+
+
+
+        // 路径配置
+        function initSocity(datas,government,matrix1,matrix2,matrix3){
+//            console.log(matrix1);
+            require.config({
+                paths: {
+                    echarts: 'jsp/yingshangzhishu1/js/echarts/build/dist'
+                }
+            });
+
+            // 使用
+            require(
+                    [
+                        'echarts',
+                        'echarts/chart/chord', // 使用柱状图就加载bar模块，按需加载
+                        'echarts/chart/pie',
+                        'echarts/chart/radar'
+                    ],
+                    function (ec) {
+                        // 基于准备好的dom，初始化echarts图表
+//                        console.log(ec);
+                        var myChart = ec.init(document.getElementById('gxt'));
+                        var hjpgChart = ec.init(document.getElementById('hjpg'));
+//                        var fwpcChart = ec.init(document.getElementById('fwpc'));
+                        var fwpcChart = ec.init($('.mark4-r-2-r.fwpc').get(0));
+                        var myoption,hjpgOption,fwpcOption;
+                        myoption = {
+                            top:0,
+                            color : [
+                                '#35b74d','#da262c','#d18c0c',
+                                '#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e','#ffcd5e',
+                                '#50bbe6','#50bbe6','#50bbe6','#50bbe6','#50bbe6','#50bbe6',
+                                '#67dead','#67dead','#67dead','#67dead','#67dead'
+                            ],
+                            fontSize:14,
+                            tooltip : {
+                                trigger: 'item',
+                                formatter : function (params) {
+                                    if (params.name && params.name.indexOf('-') != -1) {
+                                        return params.name.replace('-', ' ' + params.seriesName + ' ')
+                                    }
+                                    else {
+                                        return params.name ? params.name : params.data.id
+                                    }
+                                }
+                            },
+                            legend : {
+                                data : [
+
+                                    '正常',
+                                    '预警',
+                                    '良好',
+                                    '',
+                                    '行政审批',
+                                    '企业开办',
+                                    '施工许可证',
+                                    '用电报装',
+                                    '办理纳税',
+                                    '不动产登记',
+                                    '获得信贷',
+                                    '水气报装',
+                                    '商标注册',
+                                    '专利审批',
+
+
+                                    '货物通关',
+                                    '财税优惠办理',
+                                    '工业产品生产许可证',
+
+                                    '社会环境',
+                                    '人才供给',
+                                    '投融资',
+                                    '企业运营成本',
+                                    '法治环境',
+                                    '企业信用',
+
+                                    '政府服务',
+                                    '市场准入机制',
+                                    '政府采购',
+                                    '政府招投标',
+                                    '信息公开'
+                                ],
+                                orient: 'horizontal', // 'vertical'
+                                x: 'center', // 'center' | 'left' | {number},
+                                y: 'bottom', // 'center' | 'bottom' | {number}
+                                padding: 0,    // [5, 10, 15, 20]
+                                itemGap: 20,
+                                textStyle: {color: '#ffffff'},
+                                selectedMode : false
+                            },
+
+                            series : [
+                                {
+                                    center:['50%',400],
+                                    "name": "正常",
+                                    "type": "chord",
+                                    "showScaleText": false,
+                                    "clockWise": false,
+                                    itemStyle:{
+                                        normal:{
+                                            label:{
+                                                rotate: false,
+                                                show:false,
+                                                distance : 25,
+                                                textStyle:{
+                                                    color:'#ffffff',
+                                                    fontSize:14,
+                                                    align:'center'
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "data" : [
+                                        {
+                                            "name": "行政审批",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#ffce60',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "企业开办"},
+                                        {"name": "施工许可证"},
+                                        {"name": "用电报装"},
+                                        {"name": "办理纳税"},
+                                        {"name": "不动产登记"},
+                                        {"name": "获得信贷"},
+                                        {"name": "水气报装"},
+                                        {"name": "商标注册"},
+                                        {"name": "专利审批"},
+
+                                        {"name": "货物通关"},
+                                        {"name": "财税优惠办理"},
+
+                                        {"name": "工业产品生产许可证"},
+
+                                        {
+                                            "name": "社会环境",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#4cb4df',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "人才供给"},
+                                        {"name": "投融资"},
+                                        {"name": "企业运营成本"},
+                                        {"name": "企业信用"},
+                                        {"name": "法治环境"},
+
+                                        {
+                                            "name": "政府服务",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#67dead',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "市场准入机制"},
+                                        {"name": "政府采购"},
+                                        {"name": "政府招投标"},
+                                        {"name": "信息公开"}
+
+                                    ],
+
+                                    "matrix": matrix1
+                                },
+                                {
+                                    "name": "预警",
+                                    "type": "chord",
+                                    "insertToSerie": "正常",
+                                    "data" : [
+                                        {
+                                            "name": "行政审批",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#ffce60',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "企业开办"},
+                                        {"name": "施工许可证"},
+                                        {"name": "用电报装"},
+                                        {"name": "办理纳税"},
+                                        {"name": "不动产登记"},
+                                        {"name": "获得信贷"},
+                                        {"name": "水气报装"},
+                                        {"name": "商标注册"},
+                                        {"name": "专利审批"},
+
+                                        {"name": "货物通关"},
+                                        {"name": "财税优惠办理"},
+
+                                        {"name": "工业产品生产许可证"},
+
+                                        {
+                                            "name": "社会环境",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#4cb4df',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "人才供给"},
+                                        {"name": "投融资"},
+                                        {"name": "企业运营成本"},
+                                        {"name": "企业信用"},
+                                        {"name": "法治环境"},
+
+                                        {
+                                            "name": "政府服务",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#67dead',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "市场准入机制"},
+                                        {"name": "政府采购"},
+                                        {"name": "政府招投标"},
+                                        {"name": "信息公开"}
+
+                                    ],
+                                    "matrix": matrix2
+                                },
+                                {
+                                    "name": "良好",
+                                    "type": "chord",
+                                    "insertToSerie": "正常",
+                                    "data" : [
+                                        {
+                                            "name": "行政审批",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#ffce60',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "企业开办"},
+                                        {"name": "施工许可证"},
+                                        {"name": "用电报装"},
+                                        {"name": "办理纳税"},
+                                        {"name": "不动产登记"},
+                                        {"name": "获得信贷"},
+                                        {"name": "水气报装"},
+                                        {"name": "商标注册"},
+                                        {"name": "专利审批"},
+
+                                        {"name": "货物通关"},
+                                        {"name": "财税优惠办理"},
+
+                                        {"name": "工业产品生产许可证"},
+
+                                        {
+                                            "name": "社会环境",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#4cb4df',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "人才供给"},
+                                        {"name": "投融资"},
+                                        {"name": "企业运营成本"},
+                                        {"name": "企业信用"},
+                                        {"name": "法治环境"},
+
+                                        {
+                                            "name": "政府服务",
+                                            itemStyle : {
+                                                normal : {
+                                                    label :{
+                                                        textStyle : {
+                                                            color: '#67dead',
+                                                            fontSize:24,
+                                                            fontWeight:'bold'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {"name": "市场准入机制"},
+                                        {"name": "政府采购"},
+                                        {"name": "政府招投标"},
+                                        {"name": "信息公开"}
+
+                                    ],
+                                    "matrix": matrix3
+                                }
+                            ]
+                        };
+                        hjpgOption = {
+                            tooltip : {
+                                trigger: 'item',
+                                formatter: "{a} <br/>{b} : {c}"
+                            },
+                            calculable : true,
+                            series : [
+                                {
+                                    name:'社会环境评估',
+                                    type:'pie',
+                                    radius : [30, 90],
+                                    center : ['50%', '50%'],
+                                    roseType : 'area',
+                                    x: '50%',               // for funnel
+                                    max: 40,                // for funnel
+                                    sort : 'ascending',     // for funnel
+                                    data:datas,
+                                    itemStyle : {
+                                        normal : {
+                                            labelLine : {
+                                                length : 20
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        };
+                        fwpcOption = {
+                            tooltip : {
+                                trigger: 'axis'
+                            },
+                            polar : [
+                                {
+                                    indicator : [
+                                        {text : '市场准入机制 ', max  : 100},
+                                        {text : '政府采购', max  : 100},
+                                        {text : '政府招投标 ', max  : 100},
+                                        {text : '信息公开', max  : 100}
+                                    ],
+                                    radius : 105,
+                                    name: {
+                                        textStyle: {
+                                            color:'#1da2df'
+                                        }
+                                    },
+                                    splitArea: {
+                                        areaStyle: {
+                                            color: '#051d48'
+                                        }
+                                    },
+                                    axisLine: {
+                                        lineStyle: {
+                                            color: '#23a6d5'
+                                        }
+                                    },
+                                    splitLine: {
+                                        lineStyle: {
+                                            color: '#23a6d5'
+                                        }
+                                    }
+                                }
+                            ],
+                            series : [
+                                {
+                                    name: '政府服务测评',
+                                    center : ['50%', '50%'],
+                                    type: 'radar',
+                                    itemStyle: {
+                                        normal: {
+                                            areaStyle: {
+                                                type: 'default'
+                                            }
+                                        }
+                                    },
+                                    data : [
+                                        {
+                                            value : government,
+                                            name : '政府服务测评',
+                                            itemStyle: {
+                                                normal: {
+                                                    color: '#3af842',
+                                                    areaStyle: {
+                                                        color: 'rgba(58, 248, 66, 0.4)'
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        };
+
+                        myChart.setOption(myoption);
+                        hjpgChart.setOption(hjpgOption);
+                        fwpcChart.setOption(fwpcOption);
+                        clearInterval(timer);
+                        timer=setInterval(function () {
+                            var myChart = ec.init(document.getElementById('gxt'));
+//                            var fwpcChart = ec.init(document.getElementById('fwpc'));
+                            var fwpcChart = ec.init($('.mark4-r-2-r.fwpc').get(0));
+                            var hjpgChart = ec.init(document.getElementById('hjpg'));
+                            myChart.setOption(myoption);
+                            fwpcChart.setOption(fwpcOption);
+                            hjpgChart.setOption(hjpgOption);
+
+                        },10000);
+                    }
+            );
+
+        }
+
+
+
+    });
+
+
+
+
+
+</script>
+</body>
+</html>
